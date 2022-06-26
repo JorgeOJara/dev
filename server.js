@@ -3,10 +3,37 @@ const express  = require("express");
 const app =  express();
 
 // lib to connect to a mongodb database
-const mongoose = require('mongoose');
+const { MongoClient }  = require("mongodb");
+
+
+
+const URL = "mongodb://172.17.0.6/16:2727";
+const client = new MongoClient(URL);
+
+
+const dbName = "COLLECTED";
+
+async function main() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+  const collection = db.collection('documents');
+
+  // the following code examples can be pasted here...
+
+  return 'done.';
+}
+main()
+  .then(()=>{console.log("Its connected")})
+  .catch((err)=>{console.log(err)})
+  .finally(() => client.close());
 
 // re-format json data
 app.use(express.json());
+
+
+
 
 // default request
 app.get("/",(request,response)=>{
