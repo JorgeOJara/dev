@@ -6,8 +6,10 @@ const app =  express();
 const { MongoClient }  = require("mongodb");
 
 
-
-const URL = "mongodb://172.17.0.6:2727";
+// the addres its in the server
+//  you should inspect network bridge to
+// find the mongodb container
+const URL = "mongodb://172.17.0.6/16:2727";
 const client = new MongoClient(URL);
 
 
@@ -25,7 +27,7 @@ async function main() {
   return 'done.';
 }
 main()
-  .then((response)=>{console.log(response)})
+  .then((response)=>{console.log("finally work...")})
   .catch((err)=>{console.log(err)})
   .finally(() => client.close());
 
@@ -49,6 +51,6 @@ app.post("/addUser",(request,response)=>{
 
 
 // wait for a request
-app.listen(80,()=>{
+app.listen(5000,()=>{
 	   console.log("Server its Running")
 })
