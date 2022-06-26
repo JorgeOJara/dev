@@ -7,7 +7,7 @@ const { MongoClient }  = require("mongodb");
 
 
 
-const URL = "mongodb://172.17.0.6/16:2727";
+const URL = "mongodb://172.17.0.6:2727";
 const client = new MongoClient(URL);
 
 
@@ -25,7 +25,7 @@ async function main() {
   return 'done.';
 }
 main()
-  .then(()=>{console.log("Its connected")})
+  .then((response)=>{console.log(response)})
   .catch((err)=>{console.log(err)})
   .finally(() => client.close());
 
