@@ -9,8 +9,7 @@ axios.get("/")
 
 
 axios.post('/addUser', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
+    obj: axios.get("https://jsonplaceholder.typicode.com/users")
   })
   .then(function (response) {
     console.log(response);

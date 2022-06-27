@@ -13,24 +13,6 @@ const URL = "mongodb://172.17.0.6/16:2727";
 const client = new MongoClient(URL);
 
 
-const dbName = "COLLECTED";
-
-async function main() {
-  // Use connect method to connect to the server
-  await client.connect();
-  console.log('Connected successfully to server');
-  const db = client.db(dbName);
-  const collection = db.collection('documents');
-
-  // the following code examples can be pasted here...
-
-  return 'done.';
-}
-main()
-  .then((response)=>{console.log("finally work...")})
-  .catch((err)=>{console.log(err)})
-  .finally(() => client.close());
-
 // re-format json data
 app.use(express.json());
 
@@ -45,8 +27,24 @@ app.get("/",(request,response)=>{
 
 //post into database 
 app.post("/addUser",(request,response)=>{
-	console.log(request.body)
-	response.send("thanks for the info")
+ const dbName = "Collected";
+ async function main() {
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+
+
+  return db;
+}
+main()
+  .then((res)=>{ 
+  	   res.collection("customers").insertMany(request.body.obj);
+       console.log('Inserted documents =>', insertResult)
+   })
+  .catch((err)=>{console.log(err)})
+  .finally(() => client.close());
+
+
 })
 
 
