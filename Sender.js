@@ -1,8 +1,7 @@
 const axios  = require("axios")
-let data = null;
+let data;
 
 function Getmydata(){
-
      axios.get("https://jsonplaceholder.typicode.com/users").then((response)=>{data = response.body})
      .catch((err)=>{console.log(err)})
 }
@@ -15,9 +14,8 @@ axios.get("/")
       console.log(response);
   })
 
-
-axios.post('/addUser:5000', {
-    obj:data
+axios.post('198.199.73.35/addUser:5000', {
+     obj:data
   })
 
   .then(function (response) {

@@ -27,6 +27,7 @@ app.get("/",(request,response)=>{
 
 //post into database 
 app.post("/addUser",(request,response)=>{
+	console.log("something its here....")
     MongoClient.connect(URL, function(err, db) {
   if (err) throw err;
   var dbo = db.db("main");
