@@ -1,5 +1,13 @@
 const axios  = require("axios")
+let data = null;
 
+function Getmydata(){
+
+     axios.get("https://jsonplaceholder.typicode.com/users").then((response)=>{data = response.body})
+     .catch((err)=>{console.log(err)})
+}
+// get data you wanna insert
+Getmydata();
 
 
 axios.get("/")
@@ -9,8 +17,9 @@ axios.get("/")
 
 
 axios.post('/addUser', {
-    obj: axios.get("https://jsonplaceholder.typicode.com/users")
+    obj:data
   })
+
   .then(function (response) {
     console.log(response);
   })

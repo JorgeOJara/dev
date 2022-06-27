@@ -27,24 +27,17 @@ app.get("/",(request,response)=>{
 
 //post into database 
 app.post("/addUser",(request,response)=>{
- const dbName = "Collected";
- async function main() {
-  await client.connect();
-  console.log('Connected successfully to server');
-  const db = client.db(dbName);
+    MongoClient.connect(URL, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("main");
+  let commingFromclient =  request.body.obj
 
-
-  return db;
-}
-main()
-  .then((res)=>{ 
-  	   res.collection("customers").insertMany(request.body.obj);
-       console.log('Inserted documents =>', insertResult)
-   })
-  .catch((err)=>{console.log(err)})
-  .finally(() => client.close());
-
-
+  dbo.collection("customers").insertMany(commingFromclient, function(err, res) {
+    if (err) throw err;
+       console.log("Number of documents inserted: " + res.insertedCount);
+    db.close();
+    });
+  });
 })
 
 
