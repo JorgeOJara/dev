@@ -16,7 +16,7 @@ axios.get("/")
   })
 
 
-axios.post('/addUser', {
+axios.post('/addUser:5000', {
     obj:data
   })
 

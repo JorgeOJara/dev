@@ -10,7 +10,7 @@ const { MongoClient }  = require("mongodb");
 //  you should inspect network bridge to
 // find the mongodb container
 const URL = "mongodb://172.17.0.6/16:2727";
-const client = new MongoClient(URL);
+// const client = new MongoClient(URL);
 
 
 // re-format json data
@@ -32,7 +32,7 @@ app.post("/addUser",(request,response)=>{
   var dbo = db.db("main");
   let commingFromclient =  request.body.obj
 
-  dbo.collection("customers").insertMany(commingFromclient, function(err, res) {
+  dbo.collection("users").insertMany(commingFromclient, function(err, res) {
     if (err) throw err;
        console.log("Number of documents inserted: " + res.insertedCount);
     db.close();
