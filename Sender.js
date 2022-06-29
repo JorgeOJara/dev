@@ -14,13 +14,3 @@ axios.get("/")
       console.log(response);
   })
 
-axios.post('198.199.73.35/addUser:5000', {
-     obj:data
-  })
-
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });

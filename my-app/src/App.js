@@ -10,7 +10,7 @@ function App() {
   const handleChange = event => setMessage(event.target.value);
 
  function sendSomethingToServer(){
-    axios.post('198.199.73.35/addUser:5000', {obj:message})
+    axios.post('198.199.73.35:5000/addUser', {obj:message})
   .then(function (response) {
     console.log(response);
   })

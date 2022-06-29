@@ -37,6 +37,6 @@ app.post("/addUser",(request,response)=>{
 
 
 // wait for a request
-app.listen(5000,()=>{
+app.listen(80,()=>{
 	   console.log("Server its Running")
 })
