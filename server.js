@@ -21,7 +21,7 @@ app.get("/",(request,response)=>{
 })
 
 //post into database 
-app.post("198.199.73.35/addUser:5000",(request,response)=>{
+app.post("/addUser",(request,response)=>{
 	console.log("something its here....")
     MongoClient.connect(URL, function(err, db) {
   if (err) throw err;
