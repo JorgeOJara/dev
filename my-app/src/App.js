@@ -10,15 +10,16 @@ function App() {
   const handleChange = event => setMessage(event.target.value);
 
  function sendSomethingToServer(){
-    axios.post('198.199.73.35:5000/addUser', {obj:message})
-  .then(function (response) {
-    console.log(response);
+  axios.post('http://198.199.73.35/addUser', { url:message,})
+  .then((response) => {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
   })
-  .catch(function (error) {
-    console.log(error);
-  });
-        alert(message)
-   }
+   .catch(function (error) {console.log(error);});
+}
 
    function SaySomethingToUser(){
       if(10 == 10){

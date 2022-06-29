@@ -23,16 +23,17 @@ app.get("/",(request,response)=>{
 //post into database 
 app.post("/addUser",(request,response)=>{
 	console.log("something its here....")
-    MongoClient.connect(URL, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("main");
-  let commingFromclient =  request.body.obj
-  dbo.collection("users").insertMany(commingFromclient, function(err, res) {
-    if (err) throw err;
-       console.log("Number of documents inserted: " + res.insertedCount);
-    db.close();
-    });
-  });
+  console.log(request.body)
+  //   MongoClient.connect(URL, function(err, db) {
+  // if (err) throw err;
+  // var dbo = db.db("main");
+  // let commingFromclient =  request.body.obj
+  // dbo.collection("users").insertMany(commingFromclient, function(err, res) {
+  //   if (err) throw err;
+  //      console.log("Number of documents inserted: " + res.insertedCount);
+  //   db.close();
+  //   });
+  // });
 })
 
 
