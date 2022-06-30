@@ -10,7 +10,6 @@ function App() {
   const handleChange = event => setMessage(event.target.value);
 
  function sendSomethingToServer(){
-  alert("done")
   axios.post('198.199.73.35/addUser', { url:message})
   .then((response) => {
     console.log(response.data);
@@ -37,7 +36,7 @@ function App() {
            <SaySomethingToUser/>
     <div>
       <input
-        type="url"
+        type="text"
         id="message"
         name="message"
         onChange={handleChange}
