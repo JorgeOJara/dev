@@ -6,26 +6,28 @@ import './App.css';
 function App() {
 
   const [message, setMessage] = useState('');
+  const [finalDisplayedContentTorSafe, setFinaldisplayedContentToSafe] = useState("");
 
+  const [foundSomething,setIfFound] = useState(false)
   const handleChange = event => setMessage(event.target.value);
 
 async function sendSomethingToServer(){
   axios.post('http://198.199.73.35/addUser',{ url:message})
   .then((response) => {
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
+        if(response.status ==  200)
+        {
+          setFinaldisplayedContentToSafe(response.data);
+          setIfFound(true)
+        }
   })
    .catch(function (error) {console.log(error);});
 }
 
    function SaySomethingToUser(){
-      if(10 == 10){
+      if(foundSomething ==  false){
         return <h1>Give me a API URL</h1>
       }else{
-          return <h1>SAFE</h1>
+          return <h1>{ finalDisplayedContentTorSafe }</h1>
       }
     }
 

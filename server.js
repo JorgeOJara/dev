@@ -25,7 +25,7 @@ app.post("/addUser",(request,response)=>{
   .then((response)=>{
       console.log(response.data)
   })
-  response.send("done")
+  response.send(response.data)
 })
 
 
