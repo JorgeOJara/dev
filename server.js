@@ -23,8 +23,8 @@ app.get("/",(request,response)=>{
 app.post("/addUser",(request,response)=>{
   axios.get(request.body.url)
   .then((response)=>{
-      console.log(response.data)
-      response.json(response.data)
+     let formatingg  =  JSON.parse(response.data);
+       response.json(formatingg)
   }).catch( (err)=> console.log(err))
 })
 
