@@ -10,7 +10,7 @@ const { MongoClient }  = require("mongodb");
 // find the mongodb container
 const URL = "mongodb://172.17.0.6/16:2727";
 // const client = new MongoClient(URL);
-
+app.use(cors())
 // re-format json data
 app.use(express.json());
 
