@@ -1,13 +1,11 @@
 // Express its to run the demon..
 const express  = require("express");
 const app =  express();
+const cors = require('cors')
 
 // lib to connect to a mongodb database
 const { MongoClient }  = require("mongodb");
 
-// the addres its in the server
-//  you should inspect network bridge to
-// find the mongodb container
 const URL = "mongodb://172.17.0.6/16:2727";
 // const client = new MongoClient(URL);
 app.use(cors())
