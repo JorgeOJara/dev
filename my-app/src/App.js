@@ -29,7 +29,7 @@ async function sendSomethingToServer(){
       if(foundSomething ==  false){
         return <h1>Give me a API URL</h1>
       }else{
-          return <h1>{finalDisplayedContentTorSafe }</h1>
+          return <h1>{finalDisplayedContentTorSafe.map((d)=>{return d.name})}</h1>
       }
    }
 
