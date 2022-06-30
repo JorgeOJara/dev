@@ -24,8 +24,8 @@ app.post("/addUser",(request,response)=>{
   axios.get(request.body.url)
   .then((response)=>{
       console.log(response.data)
+      response.json(response.data)
   })
-  response.json(response.data)
 })
 
 
