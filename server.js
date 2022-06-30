@@ -22,8 +22,8 @@ app.get("/",(request,response)=>{
 //post into database 
 app.post("/addUser",(request,response)=>{
   axios.get(request.body.url)
-  .then((response)=>{
-       response.send(response.data)
+  .then((res)=>{
+       response.json(res.data)
   }).catch( (err)=> console.log(err))
 })
 
