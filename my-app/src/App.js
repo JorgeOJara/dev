@@ -10,9 +10,7 @@ function App() {
   const handleChange = event => setMessage(event.target.value);
 
 async function sendSomethingToServer(){
-  axios.post('http://198.199.73.35/addUser',{ url:message, headers: {
-          'Access-Control-Allow-Origin': true,
-        }})
+  axios.post('http://198.199.73.35/addUser',{ url:message})
   .then((response) => {
     console.log(response.data);
     console.log(response.status);

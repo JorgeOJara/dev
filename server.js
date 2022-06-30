@@ -22,7 +22,7 @@ app.get("/",(request,response)=>{
 app.post("/addUser",(request,response)=>{
 	console.log("something its here....")
   console.log(request.body)
-  reponse.send("done")
+  response.send("done")
 })
 
 
