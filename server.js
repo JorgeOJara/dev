@@ -20,8 +20,10 @@ app.get("/",(request,response)=>{
 
 //post into database 
 app.post("/addUser",(request,response)=>{
-	console.log("something its here....")
-  console.log(request.body)
+  axios.get(request.body.url)
+  .then((response)=>{
+      console.log(response.body)
+  })
   response.send("done")
 })
 
