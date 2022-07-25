@@ -29,6 +29,6 @@ app.post("/addUser",(request,response)=>{
 
 
 // wait for a request
-app.listen(80,()=>{
+app.listen(8080,()=>{
 	   console.log("Server its Running")
 })

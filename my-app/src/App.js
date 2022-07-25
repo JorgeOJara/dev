@@ -6,38 +6,33 @@ import './App.css';
 function App() {
 
   const [message, setMessage] = useState('');
-  const [finalDisplayedContentTorSafe, setFinaldisplayedContentToSafe] = useState("");
-  const [headers,setheader] = useState("")
+  const [finalDisplayedContentTorSafe, setFinaldisplayedContentToSafe] = useState('');
 
   const [foundSomething,setIfFound] = useState(false)
 
   const handleChange = event => setMessage(event.target.value);
-  const handleTextBod =  event => setheader(event.target.value);
+ 
 
 async function sendSomethingToServer(){
-  axios.post('http://198.199.73.35/addUser',{ url:message})
+  axios.post('http://198.199.73.35/addUser',{url:message})
   .then((response) => {
         if(response.status == 200)
         {
           setFinaldisplayedContentToSafe(response.data);
           console.log(response.data);
-          setIfFound(true)
-        }
+          setIfFound(true);
+        }else{alert("something wrong with the url ... please Make sure you have the right endpoint")}
   })
-   .catch(function (error) {console.log(error);});
+   .catch(function (error){console.log(error);});
 }
    function makeAnewbutton(){
        alert('clicked')
    }
 
    function SaySomethingToUser(){
-      if(foundSomething ==  false){
-        return <div>
-             <h1>Headers</h1>
-                <textarea id="headers" rows="4" cols="50" onChange={handleTextBod}>
+       if(foundSomething ==  false){
+         return <h1>MakeYourOWnAPIS</h1>
 
-                   </textarea>
-              </div>
       }else{
           return <h1>{finalDisplayedContentTorSafe.map((d)=>{return d.name})}</h1>
       }
@@ -56,8 +51,8 @@ async function sendSomethingToServer(){
         name="message"
         onChange={handleChange}
         value={message}
-      />
-      </div>
+       />
+     </div>
            <button onClick={sendSomethingToServer}>submit</button>
       </header>
     </div>
