@@ -8,6 +8,11 @@ const axios = require("axios");
 const { MongoClient }  = require("mongodb");
 
 const URL = "mongodb://172.17.0.6/16:2727";
+
+// we create 'users' collection in newdb database
+var url = "mongodb://localhost:27017/main";
+ 
+
 // const client = new MongoClient(URL);
 app.use(cors())
 // re-format json data
@@ -21,6 +26,12 @@ app.get("/",(request,response)=>{
 
 //post into database 
 app.post("/addUser",(request,response)=>{
+  // try connecting to database
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    // db pointing to newdb
+    console.log("Switched to "+db.databaseName+" database");
+  }
   axios.get(request.body.url)
   .then((res)=>{
        response.json(res.data)
