@@ -7,10 +7,10 @@ const axios = require("axios");
 // lib to connect to a mongodb database
 const { MongoClient }  = require("mongodb");
 
-const URL = "mongodb://172.17.0.2/16:2727";
+// const URL = "mongodb://172.17.0.2/16:2727";
 
 // we create 'users' collection in newdb database
-var url = "mongodb://172.17.0.2/16:27017/main";
+var url = "mongodb://172.17.0.2:27017/main";
  
 
 // const client = new MongoClient(URL);
@@ -29,8 +29,8 @@ app.post("/addUser",(request,response)=>{
   // try connecting to database
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
-    // db pointing to newdb
-    console.log("Switched to "+db+" database");
+    // db pointing to new
+    console.log("Switched to "+db.databaseName+" database");
      })  //close 
   axios.get(request.body.url)
   .then((res)=>{
