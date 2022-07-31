@@ -31,7 +31,7 @@ app.post("/addUser",(request,response)=>{
     if (err) throw err;
     // db pointing to newdb
     console.log("Switched to "+db.databaseName+" database");
-  }
+     })  //close 
   axios.get(request.body.url)
   .then((res)=>{
        response.json(res.data)
