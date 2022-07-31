@@ -10,7 +10,7 @@ const { MongoClient }  = require("mongodb");
 // const URL = "mongodb://172.17.0.2/16:2727";
 
 // we create 'users' collection in newdb database
-var url = "mongodb://172.17.0.2:27017/main";
+var url = "mongodb://172.17.0.2/16:27017/main";
  
 
 // const client = new MongoClient(URL);
