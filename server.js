@@ -1,11 +1,14 @@
 // Express its to run the demon..
 const express  = require("express");
 const app =  express();
+// use for letting a api do ap things
 const cors = require('cors');
+
 const axios = require("axios");
 
 // lib to connect to a mongodb database
 const { MongoClient }  = require("mongodb");
+const { MongoClien }  = require("mongodb";
 
 // const URL = "mongodb://172.17.0.2/16:2727";
 
@@ -39,7 +42,10 @@ app.post("/addUser",(request,response)=>{
 })
 
 
+
+
 // wait for a request
 app.listen(8080,()=>{
 	   console.log("Server its Running")
 })
+
