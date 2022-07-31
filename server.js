@@ -7,10 +7,10 @@ const axios = require("axios");
 // lib to connect to a mongodb database
 const { MongoClient }  = require("mongodb");
 
-const URL = "mongodb://172.17.0.6/16:2727";
+const URL = "mongodb://172.17.0.2/16:2727";
 
 // we create 'users' collection in newdb database
-var url = "mongodb://localhost:27017/main";
+var url = "mongodb://172.17.0.2:27017/main";
  
 
 // const client = new MongoClient(URL);
