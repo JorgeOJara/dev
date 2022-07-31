@@ -30,7 +30,7 @@ app.post("/addUser",(request,response)=>{
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     // db pointing to newdb
-    console.log("Switched to "+db.databaseName+" database");
+    console.log("Switched to "+db+" database");
      })  //close 
   axios.get(request.body.url)
   .then((res)=>{
