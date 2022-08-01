@@ -21,3 +21,26 @@ MongoClient.connect(url, function(err, db) {
         db.close();
     });
 });
+
+
+  const [message, setMessage] = useState('');
+  const [finalDisplayedContentTorSafe, setFinaldisplayedContentToSafe] = useState('');
+
+  const [foundSomething,setIfFound] = useState(false)
+  const handleChange = event => setMessage(event.target.value);
+
+
+
+
+async function sendSomethingToServer(){
+  axios.post('http://198.199.73.35/addUser',{url:message})
+  .then((response) => {
+        if(response.status == 200)
+        {
+          setFinaldisplayedContentToSafe(response.data);
+          console.log(response.data);
+          setIfFound(true);
+        }else{alert("something wrong with the url ... please Make sure you have the right endpoint")}
+  })
+   .catch(function (error){console.log(error);});
+}

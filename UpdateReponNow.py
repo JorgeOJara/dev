@@ -5,7 +5,7 @@ import time;
 os.system("git add --all")
 print("added")
 time.sleep(3)
-os.system("git commit -m 'Anotherone'")
+os.system("git commit -m 'Something'")
 print("message added")
 time.sleep(3)
 os.system("git push")
