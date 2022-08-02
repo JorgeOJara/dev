@@ -3,16 +3,9 @@ import logo from './logo.svg';
 import axios from "axios";
 import './App.css';
 import './form.css';
-// import './form.js';
 
 
 function App() {
-  // hook for singup/login
-const [Changes,setChanges] =  useState("container")
-
-function singUpButton(){setChanges("container right-panel-active")}
-function singINButton(){setChanges("container")}
-
 
 return (
   <div class="App">
