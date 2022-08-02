@@ -15,13 +15,9 @@ function singINButton(){setChanges("container")}
 
 
 return (
-    <div className="App">
-      <form class="form">
-  <div class="control">
-    <h1>
-      Sign In
-    </h1>
-  </div>
+  <div class="App">
+  <form class="form">
+  <div class="control"><h1>Sign In.</h1></div>
   <div class="control block-cube block-input">
     <input></input><div class="bg-top">
       <div class="bg-inner"></div>
@@ -55,13 +51,9 @@ return (
     <div class="bg">
       <div class="bg-inner"></div>
     </div>
-    <div class="text">
-      Log In
-    </div></button>
-  <div class="credits">
-    <a>
-      My other codepens</a>
-  </div></form>
+    <div class="text">Log In</div></button>
+     <div class="credits"></div></form>
+     <a>Debiano</a>
    </div>
   );
 }
