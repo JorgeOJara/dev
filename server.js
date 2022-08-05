@@ -35,10 +35,11 @@ app.post("/addUser",(request,response)=>{
     // db pointing to new
     console.log("Switched to "+db.databaseName+" database");
      })  //close 
-  axios.get(request.body.url)
-  .then((res)=>{
-       response.json(res.data)
-  }).catch( (err)=> console.log(err))
+  // axios.get(request.body.url)
+  // .then((res)=>{
+  //      response.json(res.data)
+  // }).catch( (err)=> console.log(err))
+  response.send("thanks")
 })
 
 
