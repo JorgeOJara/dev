@@ -1,17 +1,14 @@
- .App {
-  background-image: url("409646.jpg"); /* The image used */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+ body {
+  background-color:#212121;
   font-family: monospace, serif;
   letter-spacing: 0.05em;
+  height:670px;
 }
  h1 {
 	 font-size: 23px;
 	 color:white;
 }
  .form {
- 	 height:630px;
 	 width: 300px;
 	 padding: 64px 15px 24px;
 	 margin: 0 auto;
@@ -139,3 +136,4 @@
  .credits a:hover {
 	 opacity: 1;
 }
+.create{ padding-top:10px;padding-bottom:10px;color:white;}

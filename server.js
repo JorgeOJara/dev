@@ -8,7 +8,7 @@ const axios = require("axios");
 
 // lib to connect to a mongodb database
 const { MongoClient }  = require("mongodb");
-const { MongoClien }  = require("mongodb";
+const { MongoClien }  = require("mongodb");
 
 // const URL = "mongodb://172.17.0.2/16:2727";
 
