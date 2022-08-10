@@ -8,8 +8,8 @@ const client = new Client({ intents: [
     GatewayIntentBits.GuildPresences,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildMessageReactions,
-    GatewayIntentBits.GUILD_MESSAGES,
-    GatewayIntentBits.DIRECT_MESSAGES]
+    GatewayIntentBits.MessageContent
+    ]
    });
 
 client.on('ready', () => {
