@@ -1,6 +1,6 @@
 require('dotenv').config();
 // const cleverbot require("cleverbot-free");
-const { Client, Intents, GatewayIntentBits} = require('discord.js');
+const { Client, Intents, GatewayIntentBits,Partials} = require('discord.js');
 
 const client = new Client({ intents: [
     GatewayIntentBits.Guilds,
@@ -10,7 +10,7 @@ const client = new Client({ intents: [
     GatewayIntentBits.GuildMessageReactions,
     GatewayIntentBits.DirectMessages,
     GatewayIntentBits.GuildBans,
-    ],partials: ['CHANNEL', 'MESSAGE', 'REACTION']
+    ],partials: [Partials.Channel]
    });
 
 client.on('ready', () => {
