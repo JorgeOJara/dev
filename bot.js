@@ -28,6 +28,9 @@ client.on('messageCreate', (message) => {
         console.log(message)
          message.reply('no one cares..'+ message.author.username)
     }
+    if(message.channel.type === 'dm'){
+  message.channel.send("Pog");
+}
 });
 
 // Log In our bot
