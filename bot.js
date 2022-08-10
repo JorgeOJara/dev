@@ -8,7 +8,8 @@ const client = new Client({ intents: [
     GatewayIntentBits.GuildPresences,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildMessageReactions
-    ]
+    ],
+    partials: ['CHANNEL', 'MESSAGE', 'REACTION']
    });
 
 client.on('ready', () => {
@@ -23,10 +24,8 @@ client.on('messageCreate', (message) => {
         message.reply("stop texting, nobody cares..");
     }
     
-
     if(message.author != message.author.bot){
         console.log(message)
-
          message.reply('no one cares..'+ message.author.username)
     }
 });
