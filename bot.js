@@ -2,6 +2,10 @@ require('dotenv').config();
 // const cleverbot require("cleverbot-free");
 const { Client, Intents, GatewayIntentBits} = require('discord.js');
 
+// testing
+const smartestchatbot = require('smartestchatbot');
+const chater = new smartestchatbot.Client();
+
 const client = new Client({ intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
@@ -22,15 +26,16 @@ client.on('messageCreate', (message) => {
   if (message.mentions.has(client.user.id)) {
         console.log(message.content);
         message.reply("stop texting, nobody cares..");
+    chater.chat({message: message, name:"SmartestChatbot", owner:message.author.username, user: CoolUniqueUserId-In-NumberType}, "en").then(reply => {
+    message.reply(reply)
+      });
     }
     
     if(message.author != message.author.bot){
         console.log(message)
          message.reply('no one cares..'+ message.author.username)
     }
-    if(message.channel.type === 'dm'){
-  message.channel.send("Pog");
-}
+
 });
 
 // Log In our bot
