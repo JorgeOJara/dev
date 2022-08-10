@@ -26,7 +26,7 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.author != message.author.bot){
-         message.reply('Your message'+ message.content + "  "  +  message.author.username)
+         message.reply('Your message  =  '+ message.content + "  "  +  message.author.username)
     }
 });
 
