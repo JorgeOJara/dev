@@ -20,14 +20,14 @@ client.on('messageCreate', (message) => {
 
   if (message.mentions.has(client.user.id)) {
         console.log(message.content);
-        message.reply("dont care.." + message.user.author);
+        message.reply("dont care..");
     }
     
 
     if(message.author != message.author.bot){
         console.log(message)
 
-         message.reply('no one cares..')
+         message.reply('no one cares..'+ message.username)
     }
 });
 
