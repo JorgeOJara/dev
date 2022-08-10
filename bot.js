@@ -2,16 +2,16 @@ require('dotenv').config();
 // const cleverbot require("cleverbot-free");
 const { Client, Intents, GatewayIntentBits,Partials} = require('discord.js');
 
-const client = new Client({ intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildPresences,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessageReactions,
+const client = new Client({
+  intents: [
     GatewayIntentBits.DirectMessages,
+    GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildBans,
-    ],partials: [Partials.Channel]
-   });
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+  ],
+  partials: [Partials.Channel],
+});
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
