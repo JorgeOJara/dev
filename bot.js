@@ -3,8 +3,6 @@ require('dotenv').config();
 const { Client, Intents, GatewayIntentBits} = require('discord.js');
 
 const client = new Client({ intents: [
-    Intents.FLAGS.GUILDS ,
-    Intents.FLAGS.GUILD_MESSAGES,
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildPresences,
