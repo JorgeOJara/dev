@@ -24,7 +24,8 @@ client.on('messageCreate', (message) => {
     
 
     if(message.author != message.author.bot){
-      console.log(message.content);
+        console.log(message)
+
          message.reply('no one cares..')
     }
 });
