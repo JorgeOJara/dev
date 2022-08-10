@@ -26,7 +26,7 @@ client.on('messageCreate', (message) => {
   if (message.mentions.has(client.user.id)) {
         console.log(message.content);
         message.reply("stop texting, nobody cares..");
-    chater.chat({message: message, name:"SmartestChatbot", owner:message.author.username, user: CoolUniqueUserId-In-NumberType}, "en").then(reply => {
+    chater.chat({message: message, name:"SmartestChatbot", owner:message.author.username, user: message.author.id}, "en").then(reply => {
     message.reply(reply)
       });
     }
