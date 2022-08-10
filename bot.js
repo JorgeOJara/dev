@@ -15,16 +15,29 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('messageCreate', (message) => {
-  if (message.author.bot) return;
+// client.on('messageCreate', (message) => {
+//   if (message.author.bot) return;
 
-  if (message.mentions.has(client.user.id)) {
-        console.log(message.content);
-        message.reply("dont care..");
-    }
+//   if (message.mentions.has(client.user.id)) {
+//         console.log(message.content);
+//         message.reply("dont care..");
+//     }
     
 
-    if(message.author != message.author.bot){
+//     if(message.author != message.author.bot){
+//         console.log(message)
+
+//          message.reply('no one cares..'+ message.author.username)
+//     }
+// });
+
+//Listen to new messages on the server
+client.on("message", async (message) => {
+  if (message.content === "ping") {
+    message.reply("pong");
+  }
+
+   if(message.author != message.author.bot){
         console.log(message)
 
          message.reply('no one cares..'+ message.author.username)
