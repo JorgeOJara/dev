@@ -32,7 +32,7 @@ client.on('ready', () => {
 // });
 
 //Listen to new messages on the server
-client.on("message", async (message) => {
+client.on("messageCreate", async (message) => {
   if (message.content === "ping") {
     message.reply("pong");
   }
