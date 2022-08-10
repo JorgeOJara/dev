@@ -2,8 +2,8 @@
 require('dotenv').config();
 
 // Discord.js versions ^13.0 require us to explicitly define client intents
-const { Client } = require('discord.js');
-const client = new Client({});
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents:""});
 
     
 
@@ -12,7 +12,7 @@ client.on("ready",()=>{
 });
 
 
-client.on("message", (message)=>{
+client.on("message", (message)=> {
    console.log(message.content)
 })
 
