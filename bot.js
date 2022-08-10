@@ -37,11 +37,11 @@ client.on("messageCreate", async (message) => {
     message.reply("pong");
   }
 
-   if(message.author != message.author.bot){
-        console.log(message)
+   // if(message.author != message.author.bot){
+   //      console.log(message)
 
-         message.reply('no one cares..'+ message.author.username)
-    }
+   //       message.reply('no one cares..'+ message.author.username)
+   //  }
 });
 
 // Log In our bot
