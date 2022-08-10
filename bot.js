@@ -21,7 +21,7 @@ client.on('messageCreate', (message) => {
         console.log(message.content);
         message.reply("dont care..");
     }
-    if ( message.content == "something"){
+    if ( message.content === "something"){
          message.reply('say something im giving up on you.....')
     }
 });
