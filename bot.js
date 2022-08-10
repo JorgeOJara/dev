@@ -24,4 +24,4 @@ client.on('messageCreate', msg => {
 });
 
 // Log In our bot
-client.login('MTAwNjY4MDY1ODE5NTc5NjAxOA.G0wsKT.85KodqcH5dncVVJZWZjwtcJuktk7hpYJ8GzPLM');
+client.login(process.env.CLIENT_TOKEN);
