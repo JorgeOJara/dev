@@ -7,7 +7,10 @@ const client = new Client({ intents: [
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildPresences,
     GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessageReactions]
+    GatewayIntentBits.GuildMessageReactions,
+    "GUILD_MESSAGES",
+     "DIRECT_MESSAGES"
+    ]
    });
 
 client.on('ready', () => {
