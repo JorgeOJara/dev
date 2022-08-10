@@ -33,7 +33,7 @@ client.on('ready', () => {
 
 //Listen to new messages on the server
 client.on("messageCreate", async (message) => {
-  if (message.content === "ping") {
+  if (message.content === "ping" or message.author != message.author.bot) {
     message.reply("pong");
   }
 
