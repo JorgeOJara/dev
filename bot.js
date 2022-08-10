@@ -20,7 +20,7 @@ client.on('messageCreate', (message) => {
 
   if (message.mentions.has(client.user.id)) {
         console.log(message.content);
-        message.reply("dont care..");
+        message.reply("stop texting, nobody cares..");
     }
     
 
