@@ -1,21 +1,17 @@
-// Initialize dotenv
-require('dotenv').config();
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-// Discord.js versions ^13.0 require us to explicitly define client intents
-const { Client, Intents } = require('discord.js');
-const client = new Client({ intents:""});
-
-    
-
-client.on("ready",()=> {
-    console.log("Im online.....")
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('interactionCreate', async interaction => {
+  if (!interaction.isChatInputCommand()) return;
 
-client.on('message', (msg)=> {
-   console.log(msg.content)
-})
-
+  if (interaction.commandName === 'ping') {
+    await interaction.reply('Pong!');
+  }
+});
 
 // Log In our bot
 client.login(process.env.CLIENT_TOKEN);
