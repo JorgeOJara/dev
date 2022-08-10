@@ -7,13 +7,13 @@ const client = new Client({ intents:""});
 
     
 
-client.on("ready",()=>{
+client.on("ready",()=> {
     console.log("Im online.....")
 });
 
 
-client.on("message", (message)=> {
-   console.log(message.content)
+client.on('message', (msg)=> {
+   console.log(msg.content)
 })
 
 
