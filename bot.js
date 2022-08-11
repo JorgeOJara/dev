@@ -1,6 +1,6 @@
 require('dotenv').config();
 // const cleverbot require("cleverbot-free");
-const { Client, Intents, GatewayIntentBits,Partials , Attachment} = require('discord.js');
+const { Client, Intents, GatewayIntentBits,Partials , MessageAttachment} = require('discord.js');
 
 const client = new Client({
   intents: [
@@ -26,7 +26,7 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.content  === "sheet"){
-       const attachment = new Attachment("Fillable_Character_Sheet.pdf");
+       const attachment = new MessageAttachment("Fillable_Character_Sheet.pdf");
        message.channel.send(attachment)
     }
 
