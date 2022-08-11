@@ -36,7 +36,7 @@ client.on('messageCreate', (message) => {
     //  reply if you say something
 
     if(message.author != message.author.bot){
-         console.log(message.content);
+         console.log(message);
         message.reply("Stop talking...");
     }
 });
