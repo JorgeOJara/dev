@@ -39,7 +39,7 @@ client.on('messageCreate', (message) => {
     //  reply if you say something
 
     if(message.author != message.author.bot){
-        console.log(message.attachments.Collection.url);
+        console.log(message.attachments.Collection);
         message.reply("Stop talking...");
     }
 });
