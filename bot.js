@@ -33,7 +33,11 @@ client.on('messageCreate', (message) => {
          }]
       })
     }
+    //  reply if you say something
 
+    if(message.author != message.author.bot){
+        message.reply("Stop talking...")
+    }
 });
 
 // Log In our bot
