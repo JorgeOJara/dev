@@ -1,4 +1,6 @@
 require('dotenv').config();
+const fs = require('fs');
+const file  = fs.open("./Fillable_Character_Sheet.pdf")
 // const cleverbot require("cleverbot-free");
 const { Client, Intents, GatewayIntentBits,Partials, Attachment } = require('discord.js');
 
@@ -26,7 +28,7 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.content  === "sheet"){
-      const attachment = new Attachment("././62a07b53139aec4c1fd07771_discord-logo.png")
+      const attachment = new Attachment(file)
         message.Channel.send(attachment)
     }
 
