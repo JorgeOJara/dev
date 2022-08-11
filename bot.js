@@ -40,10 +40,13 @@ client.on('messageCreate', (message) => {
 
     if(message.author != message.author.bot){
       console.log(message.attachments);
-      
+
       message.attachments.forEach(attachment => {
         const ImageLink = attachment.url;
+        if (attachment.contentType === 'application/pdf'){
+            console.log("safe...")
            system("wget " + ImageLink + " -P ./collection/");
+         }else{console.log("ignore..")}
        });
         // console.log(message.attachments);
         message.reply("Stop talking...");
