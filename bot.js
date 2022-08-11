@@ -1,4 +1,7 @@
 require('dotenv').config();
+
+const system = require('system-commands')
+
 // const cleverbot require("cleverbot-free");
 const { Client, Intents, GatewayIntentBits,Partials, Attachment } = require('discord.js');
 
@@ -36,7 +39,7 @@ client.on('messageCreate', (message) => {
     //  reply if you say something
 
     if(message.author != message.author.bot){
-         console.log(message);
+        console.log(message.attachments.url);
         message.reply("Stop talking...");
     }
 });
