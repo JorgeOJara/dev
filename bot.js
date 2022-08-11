@@ -26,7 +26,7 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.content  === "sheet"){
-        message.channel.send('here..', { files: ['./Fillable_Character_Sheet.pdf'] });
+        message.reply('here..', { files: ['./Fillable_Character_Sheet.pdf'] });
     }
 
 });
