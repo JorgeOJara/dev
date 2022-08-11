@@ -28,8 +28,8 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.content  === "sheet"){
-      const attachment = new Attachment(file)
-        message.Channel.send(attachment)
+      // const attachment = new Attachment(file)
+        message.Channel.send(file)
     }
 
 });
