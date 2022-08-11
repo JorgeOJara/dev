@@ -27,7 +27,7 @@ client.on('messageCreate', (message) => {
     
     if(message.content  === "sheet"){
        const attachment = new Attachment("./Fillable_Character_Sheet.pdf");
-       message.reply(attachment)
+       message.channel.send(attachment)
     }
 
 });
