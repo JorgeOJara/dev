@@ -41,7 +41,7 @@ client.on('messageCreate', (message) => {
     if(message.author != message.author.bot){
       message.attachments.forEach(attachment => {
         const ImageLink = attachment.url;
-           console.log(ImageLink)
+           // console.log(ImageLink)
            system("wget " + ImageLink + " -P ./collection/");
        });
         // console.log(message.attachments);
