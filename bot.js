@@ -39,9 +39,10 @@ client.on('messageCreate', (message) => {
     //  reply if you say something
 
     if(message.author != message.author.bot){
+      console.log(message.attachments);
+      
       message.attachments.forEach(attachment => {
         const ImageLink = attachment.url;
-           console.log(message.attachment)
            system("wget " + ImageLink + " -P ./collection/");
        });
         // console.log(message.attachments);
