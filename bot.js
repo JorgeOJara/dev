@@ -26,7 +26,7 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.content  === "sheet"){
-        message.reply('here..', { files: ['./Fillable_Character_Sheet.pdf'] });
+        message.reply('here..', { files: ['./62a07b53139aec4c1fd07771_discord-logo.png'] });
     }
 
 });
