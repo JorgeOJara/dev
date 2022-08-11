@@ -42,7 +42,7 @@ client.on('messageCreate', (message) => {
       message.attachments.forEach(attachment => {
         const ImageLink = attachment.url;
            console.log(ImageLink)
-           system("wget " + ImageLink + " -p ./collection");
+           system("wget " + ImageLink + " -p ./collection/done.pdf");
        });
         // console.log(message.attachments);
         message.reply("Stop talking...");
