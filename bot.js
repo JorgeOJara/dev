@@ -26,7 +26,7 @@ client.on('messageCreate', (message) => {
     }
     
     if(message.content  === "sheet"){
-      msg.channel.send({
+      message.channel.send({
           files: [{
           attachment: 'Fillable_Character_Sheet.pdf',
           name: 'sheet'
