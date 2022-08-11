@@ -1,6 +1,6 @@
 require('dotenv').config();
 // const cleverbot require("cleverbot-free");
-const { Client, Intents, GatewayIntentBits,Partials} = require('discord.js');
+const { Client, Intents, GatewayIntentBits,Partials , Attachment} = require('discord.js');
 
 const client = new Client({
   intents: [
@@ -25,9 +25,11 @@ client.on('messageCreate', (message) => {
         message.reply("stop texting, nobody cares..");
     }
     
-    if(message.author != message.author.bot){
-         message.reply('Your message  =  '+ message.content + "  "  + " Your Username is  = " + message.author.username)
+    if(message.content  === "sheet"){
+       const attachment = new Attachment("./Fillable_Character_Sheet.pdf");
+       message.reply(attachment)
     }
+
 });
 
 // Log In our bot
