@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const random = require('random')
+
 const system = require('system-commands')
 
 // const cleverbot require("cleverbot-free");
@@ -28,9 +30,8 @@ client.on('messageCreate', (message) => {
         message.reply("stop texting, nobody cares..");
     }
       if (message.content === "?help") {
-        console.log(message.content);
-        message.reply("Help yourself");
-    }
+            message.reply("Help yourself");
+       }
     
     if(message.content  === "?Sheet" || message.content  === "?sheet"){
       message.channel.send({
@@ -40,6 +41,14 @@ client.on('messageCreate', (message) => {
          }]
       })
     }
+
+    if(message.content === "?roll 3d100"){
+         let content = message.content.split(" ");
+         console.log(content);
+         // const num = random.int(1, 100);
+         // message.reply(num)
+    }
+
     //  reply if you say something
 
     if(message.content ==="?file"){
