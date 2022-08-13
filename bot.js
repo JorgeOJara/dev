@@ -43,7 +43,7 @@ client.on('messageCreate', (message) => {
     }
 //////////////////////////////////// roll 100
 
-if(message.content..startsWith("?roll")){
+if(message.content.startsWith("?roll")){
          let content = message.content.split(" ");
          console.log(content);
          // const num = random.int(1, 100);
