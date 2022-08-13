@@ -48,26 +48,34 @@ if(message.content.startsWith("?roll")){
      try{
          let content = message.content.split(" ");
          let final = content[1].split("d");
+         let addition;
 
          if(final[1].split("+"))
          {
-              console.log(final[1].split("+"))
+            console.log(final[1].split("+"))
+
          }else if(final[1].split("-")){
-          console.log(final[1].split("+"))
-        }else{console.log("no added operations")}
+
+             final = content[1].split("d");
+
+              console.log(final[1].split("+"))
+        }else{ 
+          final = content[1].split("d");
+        }
 
          /// loop
-         let completed = [];
-         let total = 0;
+         // let completed = [];
+         // let total = 0;
 
-             for (let i = 0; i < final[0]; i++) 
-               {
-                    let num = random.int(1, Number(final[1]));
-                    completed.push(num);
-                    total += num;
-               }
+         //     for (let i = 0; i < final[0]; i++) 
+         //       {
+         //            let num = random.int(1, Number(final[1]));
+         //            completed.push(num);
+         //            total += num;
+         //       }
 
-      message.reply(completed.toString() + " Total : " + total)
+      // message.reply(completed.toString() + " Total : " + total)
+      message.reply("testing....")
      } catch (error) {
          console.error(error);
        }  
