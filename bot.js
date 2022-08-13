@@ -41,12 +41,23 @@ client.on('messageCreate', (message) => {
          }]
       })
     }
+
 //////////////////////////////////// roll 100
 
 if(message.content.startsWith("?roll")){
      try{
-            let content = message.content.split(" ");
+         cd let content = message.content.split(" ");
          let final = content[1].split("d");
+
+         if(final[1].split("+"))
+         {
+              console.log(final[1].split("+"))
+         }else if(final[1].split("-")){
+          console.log(final[1].split("+"))
+        }else{ console.log("no added operations")}
+
+         let test = final[1].split("+")
+         let test = final[1].split("-")
 
          /// loop
          let completed = [];
