@@ -46,7 +46,7 @@ client.on('messageCreate', (message) => {
 
 if(message.content.startsWith("?roll")){
      try{
-         cd let content = message.content.split(" ");
+         let content = message.content.split(" ");
          let final = content[1].split("d");
 
          if(final[1].split("+"))
