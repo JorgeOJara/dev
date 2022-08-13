@@ -28,7 +28,7 @@ client.on('messageCreate', (message) => {
         message.reply("stop texting, nobody cares..");
     }
     
-    if(message.content  === "Sheet"){
+    if(message.content  === "?Sheet" || message.content  === "?sheet"){
       message.channel.send({
           files: [{
           attachment: 'Fillable_Character_Sheet.json',
