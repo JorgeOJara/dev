@@ -32,7 +32,7 @@ client.on('messageCreate', (message) => {
       message.channel.send({
           files: [{
           attachment: 'Fillable_Character_Sheet.json',
-          name: 'sheet.pdf'
+          name: 'sheet.json'
          }]
       })
     }
