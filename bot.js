@@ -54,10 +54,7 @@ if(message.content.startsWith("?roll")){
               console.log(final[1].split("+"))
          }else if(final[1].split("-")){
           console.log(final[1].split("+"))
-        }else{ console.log("no added operations")}
-
-         let test = final[1].split("+")
-         let test = final[1].split("-")
+        }else{console.log("no added operations")}
 
          /// loop
          let completed = [];
