@@ -45,7 +45,8 @@ client.on('messageCreate', (message) => {
 
 if(message.content.startsWith("?roll")){
          let content = message.content.split(" ");
-         console.log(content);
+         console.log(content[1].split("d"));
+
          // const num = random.int(1, 100);
          // message.reply(num)
     }
