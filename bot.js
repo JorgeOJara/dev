@@ -83,7 +83,7 @@ if(message.content.startsWith("?roll")){
                     total += num;
                }
 
-      message.reply(completed.toString() + " Total : " + total + operation + addedNumber)
+      message.reply(completed.toString() + " Total : " + total + addedNumber)
 
      } catch (error) {
          console.error(error);
