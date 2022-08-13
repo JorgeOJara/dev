@@ -58,13 +58,14 @@ if(message.content.startsWith("?roll")){
          {
             let template = final[1].split("+");
                 addedNumber = Number(template[1]);
+                operation=true;
                 constructor.push(final[0])
                 constructor.push(findResult[0])
 
          }else if(findResult.length == 1){
            let template = final[1].split("-");
-               makeNumber = Number(template[1]);
-               addedNumber = makeNumber - makeNumber - makeNumber;
+               addedNumber = Number(template[1]);
+               operation=false;
                constructor.push(final[0])
                constructor.push(findResult[0])
           }
@@ -79,7 +80,8 @@ if(message.content.startsWith("?roll")){
                     completed.push(num);
                     total += num;
                }
-     let add =  total + addedNumber;
+     let add;
+     if(operation == true){let add =  total + addedNumber;}else{let add =  total - addedNumber;}
 
       message.reply(completed.toString() + " Total : " + add);
 
