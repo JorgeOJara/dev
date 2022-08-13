@@ -44,7 +44,8 @@ client.on('messageCreate', (message) => {
 //////////////////////////////////// roll 100
 
 if(message.content.startsWith("?roll")){
-         let content = message.content.split(" ");
+     try{
+            let content = message.content.split(" ");
          let final = content[1].split("d");
 
          /// loop
@@ -59,7 +60,9 @@ if(message.content.startsWith("?roll")){
                }
 
       message.reply(completed.toString() + " Total : " + total)
-      
+     } catch (error) {
+         console.error(error);
+       }  
     }
 //////////////////////////////////////////
 
