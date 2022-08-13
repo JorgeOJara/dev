@@ -83,7 +83,7 @@ if(message.content.startsWith("?roll")){
                     total += num;
                }
 
-      console.log(type(addedNumber))
+      console.log(typeof addedNumber)
 
       message.reply(completed.toString() + " Total : " + total + addedNumber)
 
