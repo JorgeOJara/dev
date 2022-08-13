@@ -57,19 +57,15 @@ if(message.content.startsWith("?roll")){
          if( findResult.length == 2 )
          {
             let template = final[1].split("+");
-            addedNumber = template[1];
-            operation = "+";
-            constructor.push(final[0])
-            constructor.push(findResult[0])
-            console.log("adding")
+                addedNumber = Number(template[1]);
+                constructor.push(final[0])
+                constructor.push(findResult[0])
 
          }else if(findResult.length == 1){
            let template = final[1].split("-");
-               addedNumber = Number(template[1]);
-               operation = "-";
+               addedNumber = -Math.abs(Number(template[1]));
                constructor.push(final[0])
                constructor.push(findResult[0])
-               console.log("remove...")
           }
 
         // loop
@@ -83,9 +79,8 @@ if(message.content.startsWith("?roll")){
                     total += num;
                }
 
-      console.log(typeof addedNumber)
 
-      message.reply(completed.toString() + " Total : " + total  + Number(addedNumber));
+      message.reply(completed.toString() + " Total : " + total  +  addedNumber);
 
      } catch (error) {
          console.error(error);
