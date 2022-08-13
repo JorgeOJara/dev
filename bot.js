@@ -31,7 +31,7 @@ client.on('messageCreate', (message) => {
     if(message.content  === "Sheet"){
       message.channel.send({
           files: [{
-          attachment: 'Fillable_Character_Sheet.pdf',
+          attachment: 'Fillable_Character_Sheet.json',
           name: 'sheet.pdf'
          }]
       })
@@ -44,7 +44,7 @@ client.on('messageCreate', (message) => {
       message.attachments.forEach(attachment => {
         const ImageLink = attachment.url;
         if (attachment.contentType === 'application/pdf'){
-            console.log("safe...")
+             console.log("safe...")
            system("wget " + ImageLink + " -P ./collection/");
          }else{console.log("ignore..")}
        });
@@ -58,18 +58,3 @@ client.login(process.env.CLIENT_TOKEN);
 
 
 
-// const fs = require('fs')
-// const pdfParse = require('pdf-parse')
-// const getPDF = async (file) => {
-//   let readFileSync = fs.readFileSync(file)
-//   try {
-//     let pdfExtract = await pdfParse(readFileSync)
-//     console.log('File content: ', pdfExtract.text)
-//     console.log('Total pages: ', pdfExtract.numpages)
-//     console.log('All content: ', pdfExtract.info)
-//   } catch (error) {
-//     throw new Error(error)
-//   }
-// }
-// const pdfRead = './demo.pdf'
-// getPDF(pdfRead)

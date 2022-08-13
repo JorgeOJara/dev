@@ -1,0 +1,70 @@
+[
+  {
+  "CharacterName": "",
+
+  "Occupation/Title": "",
+
+  "BIRTH/FAMILY": {"SPECIES": "","SEX": "","BIRTHDATE": "","SUNSIGN": "","BIRTHPLACE": "","CULTURE": "","SocialClass": "","SIBLING": {},"PARENT": {"Father": "","Mother": ""},"ESTRANGEMENT": "","CLANHEAD": ""},
+
+  "APPEARANCE": {"HEIGHT": "","WEIGHT": "","FRAME": "","COMELINESS": "","OTHER-APPEARANCE": [" none "," none "," none "],"MEDICAL": ""},
+
+  "PHYSICAL": {"STRENGTH": 0,"STAMINA": 0,"DEXTERITY": 0,"AGILITY": 0,"EYESIGHT": 0,"HEARING": 0,"SMELL": 0,"VOICE": 0},
+
+  "PERSONALITY":{"INTELLIGENCE": 0,"AURA": 0,"WILL": 0,"MORALITY": 0,"PSYCHE": "","DEITY/RELIGION":"","PIETY": 0,"NOTES":""},
+
+  "PHYSICAL-SKILLS":{"SKILL":[{"Name":"  ","SB":0 , "ML":0},{"Name":"  ", "SB":0 , "ML":0},{"Name":"  " , "SB":0 , "ML":0} ]},
+
+  "COMMUNICATION":{"SKILL": [ {"Name":"  ","SB":0 , "ML":0},{"Name":"  ", "SB":0 , "ML":0},{"Name":"  " , "SB":0 , "ML":0} ]},
+
+  "CRAFT/LORE":  {"SKILL": [{"Name":"  ","SB":0 , "ML":0},{"Name":"  ", "SB":0 , "ML":0},{"Name":"  " , "SB":0 , "ML":0} ]},
+
+  "SPELLS/RITUALS":{"SKILL": [ {"Name":"  ","LV":0 , "EML":0},{"Name":"  ", "LV":0 , "EML":0},{"Name":"  " , "LV":0 , "EML":0} ]},
+
+  "COMBAT-SKILLS":{"SKILL": [ {"Name":"  ","SB":0 , "ML":0},{"Name":"  ", "SB":0 , "ML":0},{"Name":"  " , "SB":0 , "ML":0} ]},
+
+  "LANGUAGES/SCRIPTS":{"SKILL": [ {"Name":"  ","SB":0 , "ML":0},{"Name":"  ", "SB":0 , "ML":0},{"Name":"  " , "SB":0 , "ML":0} ]},
+
+  "SHEK-PVAR":  {"CONVOCATION": [ {"Name":"  ","SB":0 , "ML":0},{"Name":"  ", "SB":0 , "ML":0},{"Name":"  " , "SB":0 , "ML":0} ]},
+
+  "COMBAT-STATS": { "INITIATIVE": 0,"ENDURANCE": 0,"DEXTERITY": 0,"AGILITY": 0,"MOVE": 0,"DODGE": 0 },
+
+  "WEAPON": [  
+        {"weaponType":"  ","WGT":0 , "WQ":0,"A":0 ,"D":0, "HM":0,"B":0,"E": 0,"P":0,"AML":0,"DML":0,"Notes":"  "},
+        {"weaponType":"  ","WGT":0 , "WQ":0,"A":0 ,"D":0, "HM":0,"B":0,"E": 0,"P":0,"AML":0,"DML":0,"Notes":"  "},
+        {"weaponType":"  ","WGT":0 , "WQ":0,"A":0 ,"D":0, "HM":0,"B":0,"E": 0,"P":0,"AML":0,"DML":0,"Notes":"  "}
+     ],
+
+  "INJURIES": [{"LOCATION":"  ","HR":0 , "ILS":0},{"LOCATION":"  ","HR":0 , "ILS":0},{"LOCATION":"  ","HR":0 , "ILS":0} ],
+
+  "LOAD":  {
+              "ARMOUR": 0,
+              "WEAPONS": [ { "Name":"  ", "Weight":0 } ,{ "Name":"  ", "Weight":0 } ] 
+           },
+           
+  "PENALTIES": {"injury-level": 0,"Fatigue-Level": 0,"UNIVERSAL": 0,"Encumbrance": 0,"PHYSICAL(A+B+C)": 0},
+
+  "SPECIAL-PENALTIES": {"PENALTIE-NAME": 0,"PENALTIE-NAME2": 0,"PENALTIE-NAME3": 0,"TOTAL": 0},
+
+  "ARMOUR/CLOTHING":  [{"item-Name":"  ","MATERIAL":" " , "AQ":0, "WT":0},{"item-Name":"  ","MATERIAL":" ",
+  "AQ":0, "WT":0},{"item-Name":"  ","MATERIAL":" " , "AQ":0, "WT":0}],
+
+  "COMPOUND-LAYERS":  {
+                        "SKULL":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "FACE":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "NECK":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "SHOULDER":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "UPPER-ARM":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "ELBOW":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "FOREARM":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "HAND":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "THORAX":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "ABDOMEN":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "HIP":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "GROIN":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "THIGH":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "KNEE":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "CALF":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0},
+                        "FOOT":{"MATERIAL":[" "," "," "],"AQ":0,"B":0,"E":0,"P":0,"F":0}
+                  }
+      }
+] 
