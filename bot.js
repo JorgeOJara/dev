@@ -53,12 +53,12 @@ if(message.content.startsWith("?roll")){
          if(final[1].split("+"))
          {
             console.log(final[1].split("+"))
+            console.log("adding")
 
          }else if(final[1].split("-")){
 
-             final = content[1].split("d");
-
-              console.log(final[1].split("+"))
+              console.log(final[1].split("-"))
+              console.log("remove...")
         }else{ 
           final = content[1].split("d");
         }
