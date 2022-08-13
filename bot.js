@@ -56,7 +56,7 @@ if(message.content.startsWith("?roll")){
                     completed.push(num);
                }
 
-      async=> console.log(completed);
+      console.log(completed);
       
     }
 //////////////////////////////////////////
