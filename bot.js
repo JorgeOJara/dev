@@ -38,9 +38,8 @@ client.on('messageCreate', (message) => {
     }
     //  reply if you say something
 
-    if(message.author != message.author.bot){
+    if(message.content ==="?file"){
       console.log(message.attachments);
-
       message.attachments.forEach(attachment => {
         const ImageLink = attachment.url;
         if (attachment.contentType === 'application/pdf'){
