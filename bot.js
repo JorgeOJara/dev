@@ -58,7 +58,7 @@ if(message.content.startsWith("?roll")){
          {
             let template = final[1].split("+");
             addedNumber = template[1];
-            operation = +;
+            operation = "+";
             constructor.push(final[0])
             constructor.push(findResult[0])
             console.log("adding")
@@ -66,7 +66,7 @@ if(message.content.startsWith("?roll")){
          }else if(findResult.length == 1){
            let template = final[1].split("-");
                addedNumber = Number(template[1]);
-               operation = -;
+               operation = "-";
                constructor.push(final[0])
                constructor.push(findResult[0])
                console.log("remove...")
