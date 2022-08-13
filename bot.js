@@ -48,15 +48,15 @@ if(message.content.startsWith("?roll")){
      try{
          let content = message.content.split(" ");
          let final = content[1].split("d");
-         let addition;
 
-         if(final[1].split("+"))
+         let findResult = final[1].split("+")
+
+         if( findResult.length == 2 )
          {
             console.log(final[1].split("+"))
             console.log("adding")
 
-         }else if(final[1].split("-")){
-
+         }else if(findResult.length == 1){
               console.log(final[1].split("-"))
               console.log("remove...")
         }else{ 
