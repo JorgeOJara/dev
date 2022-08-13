@@ -58,7 +58,7 @@ if(message.content.startsWith("?roll")){
                     total += num;
                }
 
-      message.reply(completed.toString() + " " + total)
+      message.reply(completed.toString() + " Total : " + total)
       
     }
 //////////////////////////////////////////
