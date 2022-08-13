@@ -48,34 +48,43 @@ if(message.content.startsWith("?roll")){
      try{
          let content = message.content.split(" ");
          let final = content[1].split("d");
+         let addedNumber;
+         let operation;
+         let constructor = [];
 
          let findResult = final[1].split("+")
 
          if( findResult.length == 2 )
          {
-            console.log(final[1].split("+"))
+            let template = final[1].split("+");
+            addedNumber = template[1];
+            operation = "+";
+            constructor.push(final[0])
+            constructor.push(findResult[0])
             console.log("adding")
 
          }else if(findResult.length == 1){
-              console.log(final[1].split("-"))
-              console.log("remove...")
-        }else{ 
-          final = content[1].split("d");
-        }
+           let template = final[1].split("-");
+               addedNumber = Number(template[1]);
+               operation = "-";
+               constructor.push(final[0])
+               constructor.push(findResult[0])
+               console.log("remove...")
+          }
 
-         /// loop
-         // let completed = [];
-         // let total = 0;
+        // loop
+         let completed = [];
+         let total = 0;
 
-         //     for (let i = 0; i < final[0]; i++) 
-         //       {
-         //            let num = random.int(1, Number(final[1]));
-         //            completed.push(num);
-         //            total += num;
-         //       }
+             for (let i = 0; i < constructor[0]; i++) 
+               {
+                    let num = random.int(1, Number(constructor[1]));
+                    completed.push(num);
+                    total += num;
+               }
 
-      // message.reply(completed.toString() + " Total : " + total)
-      message.reply("testing....")
+      message.reply(completed.toString() + " Total : " + total + operation + addedNumber)
+
      } catch (error) {
          console.error(error);
        }  
