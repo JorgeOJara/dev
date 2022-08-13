@@ -64,7 +64,7 @@ if(message.content.startsWith("?roll")){
          }else if(findResult.length == 1){
            let template = final[1].split("-");
                makeNumber = Number(template[1]);
-               addedNumber = (makeNumber - makeNumber) - makeNumber;
+               addedNumber = makeNumber - makeNumber - makeNumber;
                constructor.push(final[0])
                constructor.push(findResult[0])
           }
