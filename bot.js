@@ -53,11 +53,10 @@ if(message.content.startsWith("?roll")){
              for (let i = 0; i < final[0]; i++) 
                {
                     let num = random.int(1, Number(final[1]));
-                    completed.push(num)
+                    completed.push(num);
                }
-     setTimeout(function() {
-                  message.reply(completed)
-            }, 1000);
+
+      async=> message.reply(completed);
       
     }
 //////////////////////////////////////////
