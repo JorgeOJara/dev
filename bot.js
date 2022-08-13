@@ -27,6 +27,10 @@ client.on('messageCreate', (message) => {
         console.log(message.content);
         message.reply("stop texting, nobody cares..");
     }
+      if (message.content === "?help") {
+        console.log(message.content);
+        message.reply("Help yourself");
+    }
     
     if(message.content  === "?Sheet" || message.content  === "?sheet"){
       message.channel.send({
