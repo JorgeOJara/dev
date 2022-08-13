@@ -55,7 +55,7 @@ if(message.content.startsWith("?roll")){
                {
                     let num = random.int(1, Number(final[1]));
                     completed.push(num);
-                    total =+ num;
+                    total += num;
                }
 
       message.reply(completed.toString() + " " + total)
