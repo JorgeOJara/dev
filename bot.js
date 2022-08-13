@@ -49,14 +49,16 @@ if(message.content.startsWith("?roll")){
 
          /// loop
          let completed = [];
+         let total = 0;
 
              for (let i = 0; i < final[0]; i++) 
                {
                     let num = random.int(1, Number(final[1]));
                     completed.push(num);
+                    total =+ num;
                }
 
-      message.reply(completed.toString())
+      message.reply(completed.toString() + " " + total)
       
     }
 //////////////////////////////////////////
