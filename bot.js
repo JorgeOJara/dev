@@ -52,7 +52,7 @@ if(message.content.startsWith("?roll")){
 
              for (let i = 0; i < final[0]; i++) 
                {
-                    let num = random.int(1, final[1]);
+                    let num = random.int(1, Number(final[1]));
                     completed.push(num)
                }
 
