@@ -81,7 +81,7 @@ if(message.content.startsWith("?roll")){
                     total += num;
                }
      let add;
-     if(operation == true){let add =  total + addedNumber;}else{let add =  total - addedNumber;}
+     if(operation == true){add = total + addedNumber;}else{add = total - addedNumber;}
 
       message.reply(completed.toString() + " Total : " + add);
 
