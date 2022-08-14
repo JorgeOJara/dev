@@ -33,7 +33,7 @@ client.on('messageCreate', (message) => {
   if (message.content === "?help") 
        {
          const exampleEmbed = {title: 'Some title'};
-         channel.send({ embeds: [exampleEmbed] });  
+         message.channel.send({ embeds: [exampleEmbed] });  
       }
     
     if(message.content  === "?Sheet" || message.content  === "?sheet"){
