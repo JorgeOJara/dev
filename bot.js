@@ -40,7 +40,9 @@ client.on('messageCreate', (message) => {
     { name: 'Use ?roll YdX ', value: 'such as 3d6, to roll dice. ' },
     { name: 'Use ?sheet ', value: 'if you dont have a character yet, to get a blank character sheet. ', inline: true }
   )
-  .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
+  // .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
+  .setImage('https://w0.peakpx.com/wallpaper/588/231/HD-wallpaper-alita-angel-alita-battle-angel-artist-artwork-digital-art.jpg')
+  
   .setTimestamp()
   .setFooter({ 
     text: 'I Hope that helps...',
