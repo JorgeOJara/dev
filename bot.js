@@ -5,7 +5,7 @@ const random = require('random')
 const system = require('system-commands')
 
 // const cleverbot require("cleverbot-free");
-const { Client, Intents, GatewayIntentBits,Partials, Attachment } = require('discord.js');
+const { Client, Intents, GatewayIntentBits,Partials, Attachment, EmbedBuilder} = require('discord.js');
 
 const client = new Client({
   intents: [
