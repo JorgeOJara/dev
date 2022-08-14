@@ -5,7 +5,7 @@ const random = require('random')
 const system = require('system-commands')
 
 // const cleverbot require("cleverbot-free");
-const { Client, Intents, GatewayIntentBits,Partials, Attachment, EmbedBuilder} = require('discord.js');
+const { Client, Intents, GatewayIntentBits,Partials, Attachment, EmbedBuilder , AttachmentBuilder } = require('discord.js');
 
 const client = new Client({
   intents: [
@@ -29,10 +29,11 @@ client.on('messageCreate', (message) => {
 
 
 //// help embeted
-  const exampleEmbed = new EmbedBuilder().setTitle('YOU ASK FOR HEL?');
+ 
   if (message.content === "?help") 
        {
-          message.reply(exampleEmbed.setColor(0xff00e1));
+         const exampleEmbed = {title: 'Some title'};
+         channel.send({ embeds: [exampleEmbed] });  
       }
     
     if(message.content  === "?Sheet" || message.content  === "?sheet"){
