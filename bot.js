@@ -62,13 +62,13 @@ if(message.content.startsWith("?roll")){
       if(content.length  == 3 )
       {
          if(content[2].startsWith("+")){
-               let taketheOperationOut = content[2].replace("+");
+               let taketheOperationOut = content[2].replace("+"," ");
                let mkNumber = Number(taketheOperationOut);
                let add  =  total + mkNumber;
                    message.reply(completed.toString() + " Total : " + add );
                    console.log(content)
             }else{
-               let taketheOperationOut = content[2].replace("-");
+               let taketheOperationOut = content[2].replace("-"," ");
                let mkNumber = Number(taketheOperationOut);
                let resValue  =  total - mkNumber;
                message.reply(completed.toString() + " Total : " + resValue );
