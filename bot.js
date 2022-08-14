@@ -41,7 +41,7 @@ client.on('messageCreate', (message) => {
     { name: 'Use ?sheet ', value: 'if you dont have a character yet, to get a blank character sheet. ', inline: true }
   )
   // .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
-  .setImage('https://w0.peakpx.com/wallpaper/332/541/HD-wallpaper-alita-battle-angel-8k-alita-battle-angel-2019-movies-movies.jpg')
+  .setImage('./Alita-PNG-Pic.png')
   
   .setTimestamp()
   .setFooter({ 
