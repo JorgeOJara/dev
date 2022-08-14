@@ -32,8 +32,9 @@ client.on('messageCreate', (message) => {
  
   if (message.content === "?help") 
        {
-   const descriptions = "Use ?roll YdX, such as 3d6, to roll dice. Use ?sheet to get a copy of your character or, if you don't have a character yet, a blank character sheet.";
-   
+   const descriptions = "Use ?roll YdX, such as 3d6, to roll dice. Use ?sheet to get a copy of your character or," 
+   + " if you don't have a character yet, a blank character sheet.     ";
+
    const exampleEmbed = new EmbedBuilder()
   .setColor(0xff00e1)
   .setTitle('Thanks for asking....')
