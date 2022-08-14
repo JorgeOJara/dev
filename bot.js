@@ -32,23 +32,18 @@ client.on('messageCreate', (message) => {
  
   if (message.content === "?help") 
        {
+
    const exampleEmbed = new EmbedBuilder()
-  .setColor(0x0099FF)
-  .setTitle('Some title')
-  .setURL('https://discord.js.org/')
-  .setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/AfFp7pu.png', url: 'https://discord.js.org' })
-  .setDescription('Some description here')
-  .setThumbnail('https://i.imgur.com/AfFp7pu.png')
-  .addFields(
-    { name: 'Regular field title', value: 'Some value here' },
-    { name: '\u200B', value: '\u200B' },
-    { name: 'Inline field title', value: 'Some value here', inline: true },
-    { name: 'Inline field title', value: 'Some value here', inline: true },
-  )
-  .addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
-  .setImage('https://i.imgur.com/AfFp7pu.png')
+   const descriptions = "Use ?roll YdX, such as 3d6, to roll dice. Use ?sheet to get a copy of your character or, if you don't have a character yet, a blank character sheet.";
+  .setColor(0xff00e1)
+  .setTitle('Thanks for asking....')
+  .setDescription(descriptions)
+  .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
   .setTimestamp()
-  .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
+  .setFooter({ 
+    text: 'I Hope that helps...',
+       // iconURL: 'https://i.imgur.com/AfFp7pu.png'
+    });
 
          message.channel.send({ embeds: [exampleEmbed] });  
   }
