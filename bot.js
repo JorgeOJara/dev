@@ -59,7 +59,7 @@ if(message.content.startsWith("?roll")){
                     completed.push(num);
                     total += num;
                }
-      if(final.length  == 2 )
+      if(final.length  == 3 )
       {
          if(final[2].startsWith("+")){
                let taketheOperationOut = final[2].replace("+");
@@ -75,7 +75,7 @@ if(message.content.startsWith("?roll")){
                console.log('less');
             }
       }else{
-        console.log("lastOne")
+        console.log(final)
         message.reply(completed.toString() + " Total : " + total); 
       }
      
