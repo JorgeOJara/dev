@@ -31,15 +31,15 @@ client.on('messageCreate', (message) => {
 //// help embeted
  
   if (message.content === "?help") 
-       {
-   const descriptions = "Use ?roll YdX, such as 3d6, to roll dice.  Use"+
-   "?sheet to get a copy of your character or," 
-   + " if you don't have a character yet, a blank character sheet.     ";
-
+  {
    const exampleEmbed = new EmbedBuilder()
   .setColor(0xff00e1)
   .setTitle('Thanks for asking....')
-  .setDescription(descriptions)
+  .setDescription("Lets talk about Some Commands I understand")
+  .addFields(
+    { name: 'Use ?roll YdX, such as 3d6, to roll dice. ', value: 'or' },
+    { name: 'sheet to get a copy of your character or', value: 'if you dont have a character yet, a blank character sheet. ', inline: true },
+  )
   .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
   .setTimestamp()
   .setFooter({ 
