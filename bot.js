@@ -48,7 +48,7 @@ if(message.content.startsWith("?roll")){
      try{
          let content = message.content.split(" ");
          let final = content[1].split("d");
-
+          
          /// loop
          let completed = [];
          let total = 0;
@@ -59,8 +59,23 @@ if(message.content.startsWith("?roll")){
                     completed.push(num);
                     total += num;
                }
-
-      message.reply(completed.toString() + " Total : " + total)
+      if(final.lenght > 2)
+      {
+         if(final[2].startsWith("+")){
+               let taketheOperationOut = final[2].replace("+");
+               let mkNumber = Number(taketheOperationOut);
+               let add  =  total + mkNumber;
+                   message.reply(completed.toString() + " Total : " + add )
+            }
+            else
+            {
+               let taketheOperationOut = final[2].replace("-");
+               let mkNumber = Number(taketheOperationOut);
+               let resValue  =  total - mkNumber;
+               message.reply(completed.toString() + " Total : " + add )
+            }
+      }else{message.reply(completed.toString() + " Total : " + total;}
+     
      } catch (error) {
          console.error(error);
        }  
