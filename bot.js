@@ -35,7 +35,7 @@ client.on('messageCreate', (message) => {
    const exampleEmbed = new EmbedBuilder()
   .setColor(0xff00e1)
   .setTitle('Thanks for asking....')
-  .setDescription("Lets talk about Some Commands I understand")
+  .setDescription("  Lets talk about Some Commands I understand")
   .addFields(
     { name: 'Use ?roll YdX ', value: 'such as 3d6, to roll dice. ' },
     { name: 'Use ?sheet ', value: 'if you dont have a character yet, to get a blank character sheet. ', inline: true }
