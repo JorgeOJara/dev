@@ -66,20 +66,14 @@ if(message.content.startsWith("?roll")){
                let mkNumber = Number(taketheOperationOut);
                let add  =  total + mkNumber;
                    message.reply(completed.toString() + " Total : " + add );
-                   console.log(content)
             }else{
                let taketheOperationOut = content[2].replace("-"," ");
                let mkNumber = Number(taketheOperationOut);
                let resValue  =  total - mkNumber;
                message.reply(completed.toString() + " Total : " + resValue );
-               console.log(content);
             }
-      }else{
-        console.log(content)
-        message.reply(completed.toString() + " Total : " + total); 
-      }
-     
-     } catch (error) {
+      }else{message.reply(completed.toString() + " Total : " + total);}
+    } catch (error) {
          console.error(error);
        }  
     }
