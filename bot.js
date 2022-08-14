@@ -65,16 +65,21 @@ if(message.content.startsWith("?roll")){
                let taketheOperationOut = final[2].replace("+");
                let mkNumber = Number(taketheOperationOut);
                let add  =  total + mkNumber;
-                   message.reply(completed.toString() + " Total : " + add )
+                   message.reply(completed.toString() + " Total : " + add );
+                   console.log("add")
             }
             else
             {
                let taketheOperationOut = final[2].replace("-");
                let mkNumber = Number(taketheOperationOut);
                let resValue  =  total - mkNumber;
-               message.reply(completed.toString() + " Total : " + resValue )
+               message.reply(completed.toString() + " Total : " + resValue );
+               console.log('less');
             }
-      }else{message.reply(completed.toString() + " Total : " + total);}
+      }else{
+        console.log("lastOne")
+        message.reply(completed.toString() + " Total : " + total); 
+      }
      
      } catch (error) {
          console.error(error);
