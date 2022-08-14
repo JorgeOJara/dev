@@ -25,13 +25,23 @@ client.on('ready', () => {
 client.on('messageCreate', (message) => {
   if (message.author.bot) return;
 
-  if (message.mentions.has(client.user.id)) {
-        console.log(message.content);
-        message.reply("stop texting, nobody cares..");
-    }
-      if (message.content === "?help") {
-            message.reply("Help yourself");
-       }
+  if (message.mentions.has(client.user.id)) {message.reply("stop texting, nobody cares..");}
+
+  if (message.content === "?help") 
+      {
+    
+const lib = require('lib')({token: process.env.CLIENT_TOKEN});
+await lib.discord.channels['@0.3.0'].messages.create({
+  "channel_id": `${context.params.event.channel_id}`,
+  "content": "",
+  "tts": false,
+  "embeds": [
+    {
+      "type": "rich",
+      "title": `You ask for help...`,
+      "description": `Use ?roll YdX, such as 3d6, to roll dice.\n\nUse ?sheet to get a copy of your character or, if you don't have a character yet, a blank character sheet.\n\nUse ?attack [target name] [weapon name] [weapon aspect of b/e/p] [high/low/normal] to roll an attack.\n\nUse ?skill [skill name] to roll a skill check.`,
+      "color": 0xff00bb}]});
+  }
     
     if(message.content  === "?Sheet" || message.content  === "?sheet"){
       message.channel.send({
@@ -79,8 +89,6 @@ if(message.content.startsWith("?roll")){
     }
 //////////////////////////////////////////
 
-    //  reply if you say something
-
     if(message.content ==="?file"){
       console.log(message.attachments);
       message.attachments.forEach(attachment => {
@@ -90,9 +98,7 @@ if(message.content.startsWith("?roll")){
            system("wget " + ImageLink + " -P ./collection/");
          }else{console.log("ignore..")}
        });
-        // console.log(message.attachments);
-        message.reply("Stop talking...");
-    }
+    message.reply("Stop talking...");}
 });
 
 // Log In our bot
