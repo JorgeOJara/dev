@@ -32,7 +32,7 @@ client.on('messageCreate', (message) => {
   const exampleEmbed = new EmbedBuilder().setTitle('YOU ASK FOR HEL?');
   if (message.content === "?help") 
        {
-          exampleEmbed.setColor(0xff00e1);
+          message.reply(exampleEmbed.setColor(0xff00e1));
       }
     
     if(message.content  === "?Sheet" || message.content  === "?sheet"){
