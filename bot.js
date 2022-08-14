@@ -37,8 +37,8 @@ client.on('messageCreate', (message) => {
   .setTitle('Thanks for asking....')
   .setDescription("Lets talk about Some Commands I understand")
   .addFields(
-    { name: 'Use ?roll YdX, such as 3d6, to roll dice. ', value: 'or' },
-    { name: 'sheet to get a copy of your character or', value: 'if you dont have a character yet, a blank character sheet. ', inline: true },
+    { name: 'Use ?roll YdX ', value: 'such as 3d6, to roll dice. ' },
+    { name: 'Use ?sheet ', value: 'if you dont have a character yet, to get a blank character sheet. ', inline: true }
   )
   .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
   .setTimestamp()
