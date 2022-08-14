@@ -59,23 +59,23 @@ if(message.content.startsWith("?roll")){
                     completed.push(num);
                     total += num;
                }
-      if(final.length  == 3 )
+      if(content.length  == 3 )
       {
-         if(final[2].startsWith("+")){
-               let taketheOperationOut = final[2].replace("+");
+         if(content[2].startsWith("+")){
+               let taketheOperationOut = content[2].replace("+");
                let mkNumber = Number(taketheOperationOut);
                let add  =  total + mkNumber;
                    message.reply(completed.toString() + " Total : " + add );
                    console.log("add")
             }else{
-               let taketheOperationOut = final[2].replace("-");
+               let taketheOperationOut = content[2].replace("-");
                let mkNumber = Number(taketheOperationOut);
                let resValue  =  total - mkNumber;
                message.reply(completed.toString() + " Total : " + resValue );
                console.log('less');
             }
       }else{
-        console.log(final)
+        console.log(content)
         message.reply(completed.toString() + " Total : " + total); 
       }
      
