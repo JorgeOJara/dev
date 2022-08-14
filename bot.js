@@ -32,7 +32,7 @@ client.on('messageCreate', (message) => {
  
   if (message.content === "?help") 
        {
-         const exampleEmbed = {title: 'Some title'};
+         const exampleEmbed = {title: 'ASK Someone else....',color:0xff00e1};
          message.channel.send({ embeds: [exampleEmbed] });  
       }
     
