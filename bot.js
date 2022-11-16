@@ -113,6 +113,7 @@ if(message.content.startsWith("?roll")){
 
     if(message.content === "?Character"){
         // message.author.tag
+        message.reply("later, we work on this...");
       
     }
 
