@@ -108,6 +108,12 @@ if(message.content.startsWith("?roll")){
          }else{console.log("ignore..")}
        });
     message.reply("Stop talking...");}
+
+    if(message.content === "?Character"){
+        message.reply("getting....");
+    }
+
+
 });
 
 // Log In our bot
