@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const axios = require('axios').default;
+
 const random = require('random')
 
 const system = require('system-commands')
@@ -110,7 +112,8 @@ if(message.content.startsWith("?roll")){
     message.reply("Stop talking...");}
 
     if(message.content === "?Character"){
-        message.reply("getting...." +  message.author.tag);
+        // message.author.tag
+      
     }
 
 
