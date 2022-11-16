@@ -110,7 +110,7 @@ if(message.content.startsWith("?roll")){
     message.reply("Stop talking...");}
 
     if(message.content === "?Character"){
-        message.reply("getting....");
+        message.reply("getting...." +  message.member.user);
     }
 
 
