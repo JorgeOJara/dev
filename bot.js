@@ -156,7 +156,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "basic")
                {
                  const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                 .setTitle('Profile')
+                 .setTitle('Basic')
                 .addFields(
                       { name : "Name ", value : full.Name,inline:true  },
                       { name : "Race ", value :  full.Race ,inline:true },
@@ -169,7 +169,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "background")
                {
                  const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                 .setTitle('Profile')
+                 .setTitle('Background')
                   .addFields(
                        { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
                        { name : "birthPlace ", value :  full.birthPlace ,inline:true },
@@ -183,7 +183,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "appearance")
                {
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                .setTitle('Profile')
+                .setTitle('Appearance')
                 .addFields(
                         { name : "height ", value :  full.height ,inline:true },
                         { name : "weight ", value : full.weight,inline:true  },
@@ -200,7 +200,7 @@ if(message.content.startsWith("?roll")){
              if(check[2] == "stats")
              {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-            .setTitle('Profile')
+            .setTitle('Stats')
                .addFields(
                     { name : "strength ", value :full.strength.toString(),inline:true  },
                     { name : "stamina ", value :full.stamina.toString(),inline:true },
@@ -218,14 +218,14 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "personality")
                {
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                .setTitle('Profile')
+                .setTitle('Personality')
                     .addFields(
                     { name : "intelligence ", value : full.intelligence[0] ,inline:true },
-                    { name : "aura ", value : full.aura,inline:true  },
-                    { name : "will ", value :  full.will,inline:true },
-                    { name : "morality ", value :  full.morality,inline:true },
+                    { name : "aura ", value : full.aura.toString(),inline:true  },
+                    { name : "will ", value :  full.will.toString(),inline:true },
+                    { name : "morality ", value :  full.morality.toString(),inline:true },
                     { name : "deity ", value : full.deity,inline:true  },
-                    { name : "piety ", value :  full.piety,inline:true },
+                    { name : "piety ", value :  full.piety.toString(),inline:true },
                   )
                     .setImage(full.Avatare)
                      message.channel.send({ embeds: [exampleEmbed] }); 
