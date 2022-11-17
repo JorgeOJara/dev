@@ -121,15 +121,26 @@ if(message.content.startsWith("?roll")){
             chs.map( d => {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Thanks for asking....')
               .setDescription("Character ")
-              .addFields({ Name: d.Name, Race:d.Race, Sex:d.Sex})
-              .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
+              .addFields(
+                   { name : "Name " + d.Name , value : " Harn Character"},
+                   { name : "Race " + d.Race , value : " Harn Character"},
+                   { name : "Sex " + d.Sex , value : " Harn Character"},
+                   { name : "Sunsigns " + d.Sunsigns , value : " Harn Character"},
+                   { name : "birthPlace " + d.birthPlace , value : " Harn Character"},
+                   { name : "Culture " + d.Culture , value : " Harn Character"},
+                   { name : "SocialClass " + d.SocialClass , value : " Harn Character"},
+                   { name : "Sex " + d.Sex , value : " Harn Character"},
+                   { name : "Sex " + d.Sex , value : " Harn Character"},
+                   { name : "Sex " + d.Sex , value : " Harn Character"},
+                )
+              .setImage(d.Avatare)
               .setTimestamp()
             }).setFooter({  text: 'I Hope that helps...'})
               message.channel.send({ embeds: [exampleEmbed] }); 
            });     
        }
 });
-
+// https://www.pngmart.com/files/22/Alita-PNG-Pic.png
 // Log In our bot
 client.login(process.env.CLIENT_TOKEN);
 
