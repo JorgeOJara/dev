@@ -40,9 +40,13 @@ client.on('messageCreate', (message) => {
   .setDescription("  Lets talk about Some Commands I understand")
   .addFields(
     { name: 'Use ?roll YdX ', value: 'such as 3d6, to roll dice. ' },
-    { name: 'Use ?sheet ', value: 'if you dont have a character yet, to get a blank character sheet. ', inline: true }
-  )
-  // .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
+    { name: 'Use ?sheet ', value: 'if you dont have a character yet, to get a blank character sheet. ', inline: true },
+    { name: 'Use ?Characters or ?characters', value: 'It displays all the Characters Created by You on The Harnforge', inline: true },
+    { name: 'Use ?display ', value: 'it displays information about the Character... ( ?display nameofCharacter Parameters )', inline: true },
+    { name: 'Parameters for ?display', value: ' basic , background , stats , appearance, personality ,image', inline: true }
+  ) 
+
+ 
   .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
   
   .setTimestamp()
