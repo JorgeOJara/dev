@@ -147,21 +147,20 @@ if(message.content.startsWith("?roll")){
 
                  let pen = { member : message.author.tag ,  name : chName };
 
-                  axios.post('https://harnforge.com/idsFinder', pen).then(function(response) 
-                  {
+                  axios.post('https://harnforge.com/idsFinder', pen).then(function(response){
              
-             let full = response.data;
+                  let full = response.data;
 
              
               
                if(check[2] == "basic")
                {
-                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
+                 .setTitle('Profile')
                 .addFields(
-                   { name : "Name ", value : full.Name,inline:true  },
-                   { name : "Race ", value :  full.Race ,inline:true },
-                   { name : "Sex ", value :  full.Sex ,inline:true },
-
+                      { name : "Name ", value : full.Name,inline:true  },
+                      { name : "Race ", value :  full.Race ,inline:true },
+                      { name : "Sex ", value :  full.Sex ,inline:true },
                     )
                 .setImage(full.Avatare)
                  message.channel.send({ embeds: [exampleEmbed] }); 
@@ -169,7 +168,8 @@ if(message.content.startsWith("?roll")){
 
                if(check[2] == "background")
                {
-                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
+                 .setTitle('Profile')
                   .addFields(
                        { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
                        { name : "birthPlace ", value :  full.birthPlace ,inline:true },
@@ -183,7 +183,8 @@ if(message.content.startsWith("?roll")){
 
                if(check[2] == "appearance")
                {
-                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
+                .setTitle('Profile')
                 .addFields(
                         { name : "height ", value :  full.height ,inline:true },
                         { name : "weight ", value : full.weight,inline:true  },
@@ -199,32 +200,34 @@ if(message.content.startsWith("?roll")){
             
              if(check[2] == "stats")
              {
-            const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+            const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
+            .setTitle('Profile')
                .addFields(
                     { name : "strength ", value : full.strength,inline:true  },
-                    { name : "stamina ", value :  full.stamina ,inline:true },
-                    { name : "dexterity ", value :  full.dexterity ,inline:true },
+                    { name : "stamina ", value :  full.stamina,inline:true },
+                    { name : "dexterity ", value :  full.dexterity,inline:true },
                     { name : "agility ", value : full.agility,inline:true  },
-                    { name : "eyesight ", value :  full.eyesight ,inline:true },
-                    { name : "hearing ", value :  full.hearing ,inline:true },
+                    { name : "eyesight ", value :  full.eyesight,inline:true },
+                    { name : "hearing ", value :  full.hearing,inline:true },
                     { name : "smell ", value : full.smell,inline:true  },
-                    { name : "voice ", value :  full.voice ,inline:true },
+                    { name : "voice ", value :  full.voice,inline:true },
                  ) 
                .setImage(full.Avatare)
-             message.channel.send({ embeds: [exampleEmbed] }); 
+               message.channel.send({ embeds: [exampleEmbed] }); 
              }
 
                if(check[2] == "personality")
                {
-                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
+                .setTitle('Profile')
                     .addFields(
-                    { name : "intelligence ", value :  full.intelligence[0] ,inline:true },
+                    { name : "intelligence ", value : full.intelligence[0] ,inline:true },
                     { name : "aura ", value : full.aura,inline:true  },
-                    { name : "will ", value :  full.will ,inline:true },
-                    { name : "morality ", value :  full.morality ,inline:true },
+                    { name : "will ", value :  full.will,inline:true },
+                    { name : "morality ", value :  full.morality,inline:true },
                     { name : "deity ", value : full.deity,inline:true  },
-                    { name : "piety ", value :  full.piety ,inline:true },
-                        )
+                    { name : "piety ", value :  full.piety,inline:true },
+                  )
                     .setImage(full.Avatare)
                      message.channel.send({ embeds: [exampleEmbed] }); 
                      }
