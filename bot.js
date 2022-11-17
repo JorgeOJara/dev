@@ -123,6 +123,7 @@ if(message.content.startsWith("?roll")){
             chs.map( d => {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
               .setDescription(" Harn Character ")
+              .setThumbnail(d.Avatare)
               .addFields(
                    { name : "Name ", value : d.Name },
                    { name : "Race ", value :  d.Race ,inline:true },
