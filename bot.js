@@ -122,10 +122,12 @@ if(message.content.startsWith("?roll")){
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Thanks for asking....')
               .setDescription("Character ")
               .addFields(
-                   { name : "Name ", value : d.Name ,  inline: true },
+                   { name : "Name ", value : d.Name},
+                   { name: '\u200B', value: '\u200B' },
                    { name : "Race ", value :  d.Race ,  inline: true},
                    { name : "Sex ", value : d.Sex ,  inline: true},
                    { name : "Sunsigns ", value : d.Sunsigns},
+                   { name: '\u200B', value: '\u200B' },
                    { name : "birthPlace ", value : d.birthPlace ,  inline: true},
                    { name : "Culture ", value : d.Culture ,  inline: true},
                    { name : "SocialClass ", value : d.SocialClass ,  inline: true}
