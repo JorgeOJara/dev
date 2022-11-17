@@ -149,7 +149,7 @@ if(message.content.startsWith("?roll")){
 
                   axios.post('https://harnforge.com/usRemcon', pen).then(function(response) 
                   {
-                         message.reply(response.data.Name);
+                       console.log(response.data)
                   });
 
               }catch {
