@@ -230,7 +230,13 @@ if(message.content.startsWith("?roll")){
                     .setImage(full.Avatare)
                      message.channel.send({ embeds: [exampleEmbed] }); 
                      }
-
+            if(check[2] == "image")
+               {
+                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
+                .setTitle('Character Imgs')
+                    .setImage(full.Avatare)
+                     message.channel.send({ embeds: [exampleEmbed] }); 
+                     }
                   });
 
               }catch {
