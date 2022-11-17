@@ -189,8 +189,8 @@ if(message.content.startsWith("?roll")){
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
                 .setTitle('Characters Appearance')
                 .addFields(
-                        { name : "height ", value :  full.height ,inline:true },
-                        { name : "weight ", value : full.weight,inline:true  },
+                        { name : "height ", value :  full.height.toString() ,inline:true },
+                        { name : "weight ", value : full.weight.toString(),inline:true  },
                         { name : "frame ", value :  full.frame ,inline:true },
                         { name : "comeliness ", value :  full.comeliness ,inline:true },
                         { name : "complexion ", value : full.complexion,inline:true  },
