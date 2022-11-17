@@ -135,8 +135,8 @@ if(message.content.startsWith("?roll")){
                 )
               // .setImage(d.Avatare)
               .setTimestamp()
-              .setFooter({  text: 'I Hope that helps...'})
-                  message.channel.send({ embeds: [exampleEmbed] }); 
+
+             message.channel.send({ embeds: [exampleEmbed] }); 
                   // end map
               })
            });   
