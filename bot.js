@@ -111,7 +111,7 @@ if(message.content.startsWith("?roll")){
     message.reply("Stop talking...");}
 // get my Characters................................
 
-    if(message.content === "?Characters"){
+    if(message.content === "?Characters" || message.content === "?characters"){
         // message.author.tag
         let pen = { user : message.author.tag }
          axios.post('https://harnforge.com/getCh', pen).then(function(response) {
