@@ -166,34 +166,34 @@ if(message.content.startsWith("?roll")){
 
                    { name : "Description ", value :  full.Description ,inline:true },
 
-                   { name : "height ", value :  full.height ,inline:true },
+                   // { name : "height ", value :  full.height ,inline:true },
 
-                    { name : "weight ", value : full.weight,inline:true  },
+                   //  { name : "weight ", value : full.weight,inline:true  },
 
-                   { name : "frame ", value :  full.frame ,inline:true },
-                   { name : "comeliness ", value :  full.comeliness ,inline:true },
+                   // { name : "frame ", value :  full.frame ,inline:true },
+                   // { name : "comeliness ", value :  full.comeliness ,inline:true },
 
-                    { name : "complexion ", value : full.complexion,inline:true  },
-                   { name : "eyeColor ", value :  full.eyeColor ,inline:true },
-                   { name : "hairColor ", value :  full.hairColor ,inline:true },
+                   //  { name : "complexion ", value : full.complexion,inline:true  },
+                   // { name : "eyeColor ", value :  full.eyeColor ,inline:true },
+                   // { name : "hairColor ", value :  full.hairColor ,inline:true },
 
-                    { name : "strength ", value : full.strength,inline:true  },
-                   { name : "stamina ", value :  full.stamina ,inline:true },
-                   { name : "dexterity ", value :  full.dexterity ,inline:true },
+                   //  { name : "strength ", value : full.strength,inline:true  },
+                   // { name : "stamina ", value :  full.stamina ,inline:true },
+                   // { name : "dexterity ", value :  full.dexterity ,inline:true },
 
-                   { name : "agility ", value : full.agility,inline:true  },
-                   { name : "eyesight ", value :  full.eyesight ,inline:true },
-                   { name : "hearing ", value :  full.hearing ,inline:true },
-                   { name : "smell ", value : full.smell,inline:true  },
+                   // { name : "agility ", value : full.agility,inline:true  },
+                   // { name : "eyesight ", value :  full.eyesight ,inline:true },
+                   // { name : "hearing ", value :  full.hearing ,inline:true },
+                   // { name : "smell ", value : full.smell,inline:true  },
 
-                   { name : "voice ", value :  full.voice ,inline:true },
-                   { name : "intelligence ", value :  full.intelligence[0] ,inline:true },
-                   { name : "aura ", value : full.aura,inline:true  },
-                   { name : "will ", value :  full.will ,inline:true },
+                   // { name : "voice ", value :  full.voice ,inline:true },
+                   // { name : "intelligence ", value :  full.intelligence[0] ,inline:true },
+                   // { name : "aura ", value : full.aura,inline:true  },
+                   // { name : "will ", value :  full.will ,inline:true },
 
-                   { name : "morality ", value :  full.morality ,inline:true },
-                   { name : "deity ", value : full.deity,inline:true  },
-                   { name : "piety ", value :  full.piety ,inline:true },
+                   // { name : "morality ", value :  full.morality ,inline:true },
+                   // { name : "deity ", value : full.deity,inline:true  },
+                   // { name : "piety ", value :  full.piety ,inline:true },
                 )
             .setImage(full.Avatare)
              message.channel.send({ embeds: [exampleEmbed] }); 
