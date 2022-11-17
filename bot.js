@@ -121,10 +121,10 @@ if(message.content.startsWith("?roll")){
 
 //   { name: '\u200B', value: '\u200B' },
             chs.map( d => {
-            const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Thanks for asking....')
-              .setDescription("Character ")
+            const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+              .setDescription(" Harn Character ")
               .addFields(
-                   { name : "Name ", value : d.Name,inline:true },
+                   { name : "Name ", value : d.Name },
                    { name : "Race ", value :  d.Race ,inline:true },
                    { name : "Sex ", value : d.Sex ,inline:true },
                    { name : "Sunsigns ", value : d.Sunsigns,inline:true },
