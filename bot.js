@@ -133,7 +133,7 @@ if(message.content.startsWith("?roll")){
                    { name : "Culture ", value : d.Culture ,inline:true },
                    { name : "SocialClass ", value : d.SocialClass,inline: true }
                 )
-              .setImage(d.Avatare)
+              // .setImage(d.Avatare)
               .setTimestamp()
               .setFooter({  text: 'I Hope that helps...'})
                   message.channel.send({ embeds: [exampleEmbed] }); 
