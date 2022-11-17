@@ -122,7 +122,7 @@ if(message.content.startsWith("?roll")){
 //   { name: '\u200B', value: '\u200B' },
             chs.map( d => {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
-              .setDescription(" Harn Character ")
+              // .setDescription("")
               .setThumbnail(d.Avatare)
               .addFields(
                    { name : "Name ", value : d.Name },
