@@ -115,27 +115,23 @@ if(message.content.startsWith("?roll")){
         // message.author.tag
         let pen = { user : message.author.tag }
          axios.post('https://harnforge.com/getCh', pen).then(function(response) {
-               let chs = response.data;
-               chs.map( d => message.reply(d.Name));
-let gg = [];
 
-const exampleEmbed = new EmbedBuilder()
-  .setColor(0xff00e1)
-  .setTitle('Thanks for asking....')
-  .setDescription("  Lets talk about Some Commands I understand")
+            let chs = response.data;
+            let gg = [];
+            chs.map( d => gg.push({ name: d.Name , Race: d.Race , Sex: d.Sex }) );
 
-   chs.map( d => gg.push({ name: d.Name , Race: d.Race , Sex: d.Sex }) );
-  .addFields(gg)
-  .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
-  
-  .setTimestamp()
-  .setFooter({ 
-      text: 'I Hope that helps...',
-    });
+            const exampleEmbed = new EmbedBuilder()
+              .setColor(0xff00e1)
+              .setTitle('Thanks for asking....')
+              .setDescription("  Lets talk about Some Commands I understand")
+              .addFields(gg)
+              .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
+              .setTimestamp()
+              .setFooter({  text: 'I Hope that helps...' });
 
-         message.channel.send({ embeds: [exampleEmbed] }); 
-           });     
-       }
+                     message.channel.send({ embeds: [exampleEmbed] }); 
+                       });     
+                   }
 });
 
 // Log In our bot
