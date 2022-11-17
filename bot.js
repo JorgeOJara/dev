@@ -149,7 +149,54 @@ if(message.content.startsWith("?roll")){
 
                   axios.post('https://harnforge.com/idsFinder', pen).then(function(response) 
                   {
-                       console.log(response.data)
+                let full = response.data;
+
+                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+              // .setDescription("")
+              .addFields(
+                   { name : "Name ", value : full.Name,inline:true  },
+                   { name : "Race ", value :  full.Race ,inline:true },
+                   { name : "Sex ", value :  full.Sex ,inline:true },
+
+                    { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
+                   { name : "birthPlace ", value :  full.birthPlace ,inline:true },
+                   { name : "Culture ", value :  full.Culture ,inline:true },
+
+                    { name : "SocialClass ", value : full.SocialClass,inline:true  },
+
+                   { name : "Description ", value :  full.Description ,inline:true },
+
+                   { name : "height ", value :  full.height ,inline:true },
+
+                    { name : "weight ", value : full.weight,inline:true  },
+
+                   { name : "frame ", value :  full.frame ,inline:true },
+                   { name : "comeliness ", value :  full.comeliness ,inline:true },
+
+                    { name : "complexion ", value : full.complexion,inline:true  },
+                   { name : "eyeColor ", value :  full.eyeColor ,inline:true },
+                   { name : "hairColor ", value :  full.hairColor ,inline:true },
+
+                    { name : "strength ", value : full.strength,inline:true  },
+                   { name : "stamina ", value :  full.stamina ,inline:true },
+                   { name : "dexterity ", value :  full.dexterity ,inline:true },
+
+                   { name : "agility ", value : full.agility,inline:true  },
+                   { name : "eyesight ", value :  full.eyesight ,inline:true },
+                   { name : "hearing ", value :  full.hearing ,inline:true },
+                   { name : "smell ", value : full.smell,inline:true  },
+
+                   { name : "voice ", value :  full.voice ,inline:true },
+                   { name : "intelligence ", value :  full.intelligence[0] ,inline:true },
+                   { name : "aura ", value : full.aura,inline:true  },
+                   { name : "will ", value :  full.will ,inline:true },
+
+                   { name : "morality ", value :  full.morality ,inline:true },
+                   { name : "deity ", value : full.deity,inline:true  },
+                   { name : "piety ", value :  full.piety ,inline:true },
+                )
+            .setImage(full.Avatare)
+             message.channel.send({ embeds: [exampleEmbed] }); 
                   });
 
               }catch {
