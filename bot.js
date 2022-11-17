@@ -175,7 +175,6 @@ if(message.content.startsWith("?roll")){
                        { name : "birthPlace ", value :  full.birthPlace ,inline:true },
                        { name : "Culture ", value :  full.Culture ,inline:true },
                        { name : "SocialClass ", value : full.SocialClass,inline:true  },
-                       // { name : "Description ", value :  full.Description ,inline:true },
                     )
                   .setImage(full.Avatare)
                   message.channel.send({ embeds: [exampleEmbed] }); 
@@ -203,14 +202,14 @@ if(message.content.startsWith("?roll")){
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
             .setTitle('Profile')
                .addFields(
-                    { name : "strength ", value : full.strength,inline:true  },
-                    { name : "stamina ", value :  full.stamina,inline:true },
-                    { name : "dexterity ", value :  full.dexterity,inline:true },
-                    { name : "agility ", value : full.agility,inline:true  },
-                    { name : "eyesight ", value :  full.eyesight,inline:true },
-                    { name : "hearing ", value :  full.hearing,inline:true },
-                    { name : "smell ", value : full.smell,inline:true  },
-                    { name : "voice ", value :  full.voice,inline:true },
+                    { name : "strength ", value :full.strength,inline:true  },
+                    { name : "stamina ", value :full.stamina,inline:true },
+                    { name : "dexterity ", value :full.dexterity,inline:true },
+                    { name : "agility ", value :full.agility,inline:true  },
+                    { name : "eyesight ", value :full.eyesight,inline:true },
+                    { name : "hearing ", value :full.hearing,inline:true },
+                    { name : "smell ", value :full.smell,inline:true  },
+                    { name : "voice ", value :full.voice,inline:true },
                  ) 
                .setImage(full.Avatare)
                message.channel.send({ embeds: [exampleEmbed] }); 
