@@ -111,27 +111,26 @@ if(message.content.startsWith("?roll")){
     message.reply("Stop talking...");}
 // get my Characters................................
 
-    if(message.content === "?Character"){
+    if(message.content === "?Characters"){
         // message.author.tag
         let pen = { user : message.author.tag }
          axios.post('https://harnforge.com/getCh', pen).then(function(response) {
 
             let chs = response.data;
-            let gg = [];
-            chs.map( d => gg.push({ name: d.Name , Race: d.Race , Sex: d.Sex }) );
 
-            const exampleEmbed = new EmbedBuilder()
-              .setColor(0xff00e1)
-              .setTitle('Thanks for asking....')
-              .setDescription("  Lets talk about Some Commands I understand")
-              .addFields(gg)
+            chs.map( d => {
+            const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Thanks for asking....')
+              .setDescription(" Character ")
+              .addFields( { Name: d.Name, Race : d.Race , d.Sex })
               .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
               .setTimestamp()
-              .setFooter({  text: 'I Hope that helps...' });
+            })
+        
+              .setFooter({  text: 'I Hope that helps...'});
 
-                     message.channel.send({ embeds: [exampleEmbed] }); 
-                       });     
-                   }
+               message.channel.send({ embeds: [exampleEmbed] }); 
+           });     
+       }
 });
 
 // Log In our bot
