@@ -118,8 +118,6 @@ if(message.content.startsWith("?roll")){
 
             let chs = response.data;
 
-
-//   { name: '\u200B', value: '\u200B' },
             chs.map( d => {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
               // .setDescription("")
@@ -136,10 +134,45 @@ if(message.content.startsWith("?roll")){
            });   
              // end
        }
+
+
+
+     //  get data from single Character
+
+       if(message.content.startsWith("?display"))
+       {
+              try{
+                 let check = message.content.split(" ");
+                 let chName = check[1];
+
+                 let pen = { member : message.author.tag ,  name : chName };
+
+                  axios.post('https://harnforge.com/usRemcon', pen).then(function(response) 
+                  {
+                         message.reply(response.data.Name);
+                  }
+
+              }catch {
+
+              }
+       }
+
 });
 // https://www.pngmart.com/files/22/Alita-PNG-Pic.png
 // Log In our bot
 client.login(process.env.CLIENT_TOKEN);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
