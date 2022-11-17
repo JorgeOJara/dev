@@ -185,10 +185,13 @@ if(message.content.startsWith("?roll")){
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
                 .setTitle('Profile')
                 .addFields(
-                       { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
-                       { name : "birthPlace ", value :  full.birthPlace ,inline:true },
-                       { name : "Culture ", value :  full.Culture ,inline:true },
-                       { name : "SocialClass ", value : full.SocialClass,inline:true  },
+                        { name : "height ", value :  full.height ,inline:true },
+                        { name : "weight ", value : full.weight,inline:true  },
+                        { name : "frame ", value :  full.frame ,inline:true },
+                        { name : "comeliness ", value :  full.comeliness ,inline:true },
+                        { name : "complexion ", value : full.complexion,inline:true  },
+                        { name : "eyeColor ", value :  full.eyeColor ,inline:true },
+                        { name : "hairColor ", value :  full.hairColor ,inline:true },
                     )
                 .setImage(full.Avatare)
                  message.channel.send({ embeds: [exampleEmbed] }); 
@@ -199,14 +202,14 @@ if(message.content.startsWith("?roll")){
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
             .setTitle('Profile')
                .addFields(
-                    { name : "strength ", value :full.strength,inline:true  },
-                    { name : "stamina ", value :full.stamina,inline:true },
-                    { name : "dexterity ", value :full.dexterity,inline:true },
-                    { name : "agility ", value :full.agility,inline:true  },
-                    { name : "eyesight ", value :full.eyesight,inline:true },
-                    { name : "hearing ", value :full.hearing,inline:true },
-                    { name : "smell ", value :full.smell,inline:true  },
-                    { name : "voice ", value :full.voice,inline:true },
+                    { name : "strength ", value :full.strength.toString(),inline:true  },
+                    { name : "stamina ", value :full.stamina.toString(),inline:true },
+                    { name : "dexterity ", value :full.dexterity.toString(),inline:true },
+                    { name : "agility ", value :full.agility.toString(),inline:true  },
+                    { name : "eyesight ", value :full.eyesight.toString(),inline:true },
+                    { name : "hearing ", value :full.hearing.toString(),inline:true },
+                    { name : "smell ", value :full.smell.toString(),inline:true  },
+                    { name : "voice ", value :full.voice,inline.toString():true },
                  ) 
                .setImage(full.Avatare)
                message.channel.send({ embeds: [exampleEmbed] }); 
