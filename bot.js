@@ -98,7 +98,6 @@ if(message.content.startsWith("?roll")){
          console.error(error);
        }  
     }
-//////////////////////////////////////////
 
     if(message.content ==="?file"){
       console.log(message.attachments);
@@ -110,14 +109,14 @@ if(message.content.startsWith("?roll")){
          }else{console.log("ignore..")}
        });
     message.reply("Stop talking...");}
-
+// get my Characters................................
     if(message.content === "?Character"){
         // message.author.tag
-        message.reply("later, we work on this...");
-      
-    }
-
-
+        let pen = { user : message.author.tag }
+         axios.post('https://harnforge.com/getCh', pen).then(function(response) {
+               message.reply(response);
+           });     
+       }
 });
 
 // Log In our bot
