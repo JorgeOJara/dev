@@ -125,7 +125,7 @@ if(message.content.startsWith("?roll")){
               // .setDescription("")
               .setThumbnail(d.Avatare)
               .addFields(
-                   { name : "Name ", value : d.Name },
+                   { name : "Name ", value : d.Name,inline:true  },
                    { name : "Race ", value :  d.Race ,inline:true },
                    { name : "Sex ", value : d.Sex ,inline:true },
                    { name : "Sunsigns ", value : d.Sunsigns,inline:true },
