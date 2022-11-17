@@ -132,9 +132,12 @@ if(message.content.startsWith("?roll")){
                 )
               .setImage(d.Avatare)
               .setTimestamp()
-            }).setFooter({  text: 'I Hope that helps...'})
-              message.channel.send({ embeds: [exampleEmbed] }); 
-           });     
+              .setFooter({  text: 'I Hope that helps...'})
+                  message.channel.send({ embeds: [exampleEmbed] }); 
+                  // end map
+              })
+           });   
+             // end
        }
 });
 // https://www.pngmart.com/files/22/Alita-PNG-Pic.png
