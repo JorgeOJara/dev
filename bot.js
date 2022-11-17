@@ -152,20 +152,24 @@ if(message.content.startsWith("?roll")){
              
              let full = response.data;
 
-              const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
+             
               
                if(check[2] == "basic")
                {
+                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
                 .addFields(
                    { name : "Name ", value : full.Name,inline:true  },
                    { name : "Race ", value :  full.Race ,inline:true },
                    { name : "Sex ", value :  full.Sex ,inline:true },
 
                     )
+                .setImage(full.Avatare)
+                 message.channel.send({ embeds: [exampleEmbed] }); 
                }
 
                if(check[2] == "background")
                {
+                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
                   .addFields(
                        { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
                        { name : "birthPlace ", value :  full.birthPlace ,inline:true },
@@ -173,10 +177,13 @@ if(message.content.startsWith("?roll")){
                        { name : "SocialClass ", value : full.SocialClass,inline:true  },
                        // { name : "Description ", value :  full.Description ,inline:true },
                     )
+                  .setImage(full.Avatare)
+                  message.channel.send({ embeds: [exampleEmbed] }); 
                }
 
                if(check[2] == "appearance")
                {
+                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
                 .addFields(
                         { name : "height ", value :  full.height ,inline:true },
                         { name : "weight ", value : full.weight,inline:true  },
@@ -186,10 +193,13 @@ if(message.content.startsWith("?roll")){
                         { name : "eyeColor ", value :  full.eyeColor ,inline:true },
                         { name : "hairColor ", value :  full.hairColor ,inline:true },
                     )
+                .setImage(full.Avatare)
+                 message.channel.send({ embeds: [exampleEmbed] }); 
                }
             
              if(check[2] == "stats")
              {
+            const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
                .addFields(
                     { name : "strength ", value : full.strength,inline:true  },
                     { name : "stamina ", value :  full.stamina ,inline:true },
@@ -200,10 +210,13 @@ if(message.content.startsWith("?roll")){
                     { name : "smell ", value : full.smell,inline:true  },
                     { name : "voice ", value :  full.voice ,inline:true },
                  ) 
+               .setImage(full.Avatare)
+             message.channel.send({ embeds: [exampleEmbed] }); 
              }
 
                if(check[2] == "personality")
                {
+                const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Profile')
                     .addFields(
                     { name : "intelligence ", value :  full.intelligence[0] ,inline:true },
                     { name : "aura ", value : full.aura,inline:true  },
@@ -212,10 +225,10 @@ if(message.content.startsWith("?roll")){
                     { name : "deity ", value : full.deity,inline:true  },
                     { name : "piety ", value :  full.piety ,inline:true },
                         )
-               }
+                    .setImage(full.Avatare)
+                     message.channel.send({ embeds: [exampleEmbed] }); 
+                     }
 
-            .setImage(full.Avatare)
-             message.channel.send({ embeds: [exampleEmbed] }); 
                   });
 
               }catch {
