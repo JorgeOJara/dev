@@ -214,7 +214,7 @@ if(message.content.startsWith("?roll")){
                     { name : "hearing ", value :full.hearing.toString(),inline:true },
                     { name : "smell ", value :full.smell.toString(),inline:true  },
                     { name : "voice Description ", value :full.voice[0],inline:true },
-                    { name : "voice Value ", value :full.voice[1],inline:true },
+                    { name : "voice Value ", value :full.voice[1].toString(),inline:true },
                  ) 
                .setImage(full.Avatare)
                message.channel.send({ embeds: [exampleEmbed] }); 
@@ -226,7 +226,7 @@ if(message.content.startsWith("?roll")){
                 .setTitle('Character Personality')
                     .addFields(
                     { name : "intelligence ", value : full.intelligence[0]  +  full.intelligence[1],inline:true },
-                    { name : "intelligence Value ", value : full.intelligence[2],inline:true },
+                    { name : "intelligence Value ", value : full.intelligence[2].toString(),inline:true },
                     { name : "aura ", value : full.aura.toString(),inline:true  },
                     { name : "will ", value :  full.will.toString(),inline:true },
                     { name : "morality ", value :  full.morality.toString(),inline:true },
