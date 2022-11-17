@@ -129,8 +129,6 @@ if(message.content.startsWith("?roll")){
                    { name : "Race ", value :  d.Race ,inline:true },
                    { name : "Sex ", value : d.Sex ,inline:true },
                 )
-              // .setImage(d.Avatare)
-              .setTimestamp()
 
              message.channel.send({ embeds: [exampleEmbed] }); 
                   // end map
