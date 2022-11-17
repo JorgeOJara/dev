@@ -115,7 +115,8 @@ if(message.content.startsWith("?roll")){
         // message.author.tag
         let pen = { user : message.author.tag }
          axios.post('https://harnforge.com/getCh', pen).then(function(response) {
-               message.reply(response.data);
+               console.log(response.data);
+               message.reply("running...");
            });     
        }
 });
