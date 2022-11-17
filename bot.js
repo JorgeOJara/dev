@@ -128,10 +128,7 @@ if(message.content.startsWith("?roll")){
                    { name : "Sunsigns " + d.Sunsigns , value : " Harn Character"},
                    { name : "birthPlace " + d.birthPlace , value : " Harn Character"},
                    { name : "Culture " + d.Culture , value : " Harn Character"},
-                   { name : "SocialClass " + d.SocialClass , value : " Harn Character"},
-                   { name : "Sex " + d.Sex , value : " Harn Character"},
-                   { name : "Sex " + d.Sex , value : " Harn Character"},
-                   { name : "Sex " + d.Sex , value : " Harn Character"},
+                   { name : "SocialClass " + d.SocialClass , value : " Harn Character"}
                 )
               .setImage(d.Avatare)
               .setTimestamp()
