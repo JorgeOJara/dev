@@ -185,13 +185,10 @@ if(message.content.startsWith("?roll")){
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
                 .setTitle('Profile')
                 .addFields(
-                        { name : "height ", value :  full.height ,inline:true },
-                        { name : "weight ", value : full.weight,inline:true  },
-                        { name : "frame ", value :  full.frame ,inline:true },
-                        { name : "comeliness ", value :  full.comeliness ,inline:true },
-                        { name : "complexion ", value : full.complexion,inline:true  },
-                        { name : "eyeColor ", value :  full.eyeColor ,inline:true },
-                        { name : "hairColor ", value :  full.hairColor ,inline:true },
+                       { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
+                       { name : "birthPlace ", value :  full.birthPlace ,inline:true },
+                       { name : "Culture ", value :  full.Culture ,inline:true },
+                       { name : "SocialClass ", value : full.SocialClass,inline:true  },
                     )
                 .setImage(full.Avatare)
                  message.channel.send({ embeds: [exampleEmbed] }); 
