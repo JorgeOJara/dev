@@ -123,7 +123,9 @@ const exampleEmbed = new EmbedBuilder()
   .setColor(0xff00e1)
   .setTitle('Thanks for asking....')
   .setDescription("  Lets talk about Some Commands I understand")
-  chs.map( d => .addFields({ name: d.Name , Race: d.Race , Sex: d.Sex }));
+   chs.map( d => {
+    .addFields({ name: d.Name , Race: d.Race , Sex: d.Sex })
+   });
   
   // .setImage('https://w0.peakpx.com/wallpaper/428/729/HD-wallpaper-alita-battle-angel-alita-alita-angel-alita-battle-alita-battle-angel-angel-art-battle-battle-angel-drawing-girl.jpg')
   .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
