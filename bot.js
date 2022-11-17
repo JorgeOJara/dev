@@ -209,7 +209,7 @@ if(message.content.startsWith("?roll")){
                     { name : "eyesight ", value :full.eyesight.toString(),inline:true },
                     { name : "hearing ", value :full.hearing.toString(),inline:true },
                     { name : "smell ", value :full.smell.toString(),inline:true  },
-                    { name : "voice ", value :full.voice,:true },
+                    { name : "voice ", value :full.voice,inline:true },
                  ) 
                .setImage(full.Avatare)
                message.channel.send({ embeds: [exampleEmbed] }); 
