@@ -156,7 +156,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "basic")
                {
                  const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                 .setTitle('Basic')
+                 .setTitle('Character Basic Info')
                 .addFields(
                       { name : "Name ", value : full.Name,inline:true  },
                       { name : "Race ", value :  full.Race ,inline:true },
@@ -169,7 +169,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "background")
                {
                  const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                 .setTitle('Background')
+                 .setTitle('Character Background')
                   .addFields(
                        { name : "Sunsigns ", value : full.Sunsigns,inline:true  },
                        { name : "birthPlace ", value :  full.birthPlace ,inline:true },
@@ -183,7 +183,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "appearance")
                {
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                .setTitle('Appearance')
+                .setTitle('Characters Appearance')
                 .addFields(
                         { name : "height ", value :  full.height ,inline:true },
                         { name : "weight ", value : full.weight,inline:true  },
@@ -200,7 +200,7 @@ if(message.content.startsWith("?roll")){
              if(check[2] == "stats")
              {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-            .setTitle('Stats')
+            .setTitle('Character Stats')
                .addFields(
                     { name : "strength ", value :full.strength.toString(),inline:true  },
                     { name : "stamina ", value :full.stamina.toString(),inline:true },
@@ -218,7 +218,7 @@ if(message.content.startsWith("?roll")){
                if(check[2] == "personality")
                {
                 const exampleEmbed = new EmbedBuilder().setColor(0xff00e1)
-                .setTitle('Personality')
+                .setTitle('Character Personality')
                     .addFields(
                     { name : "intelligence ", value : full.intelligence[0] ,inline:true },
                     { name : "aura ", value : full.aura.toString(),inline:true  },
