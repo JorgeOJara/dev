@@ -164,7 +164,7 @@ if(message.content.startsWith("?roll")){
 
                     { name : "SocialClass ", value : full.SocialClass,inline:true  },
 
-                   { name : "Description ", value :  full.Description ,inline:true },
+                   // { name : "Description ", value :  full.Description ,inline:true },
 
                    // { name : "height ", value :  full.height ,inline:true },
 
