@@ -128,10 +128,6 @@ if(message.content.startsWith("?roll")){
                    { name : "Name ", value : d.Name,inline:true  },
                    { name : "Race ", value :  d.Race ,inline:true },
                    { name : "Sex ", value : d.Sex ,inline:true },
-                   { name : "Sunsigns ", value : d.Sunsigns,inline:true },
-                   { name : "birthPlace ", value : d.birthPlace,inline:true },
-                   { name : "Culture ", value : d.Culture ,inline:true },
-                   { name : "SocialClass ", value : d.SocialClass,inline: true }
                 )
               // .setImage(d.Avatare)
               .setTimestamp()
