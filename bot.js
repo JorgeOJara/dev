@@ -120,15 +120,12 @@ if(message.content.startsWith("?roll")){
 
             chs.map( d => {
             const exampleEmbed = new EmbedBuilder().setColor(0xff00e1).setTitle('Thanks for asking....')
-              .setDescription(" Character ")
-              .addFields( { Name: d.Name, Race : d.Race , d.Sex })
+              .setDescription("Character ")
+              .addFields({ Name: d.Name, Race:d.Race, Sex:d.Sex})
               .setImage('https://www.pngmart.com/files/22/Alita-PNG-Pic.png')
               .setTimestamp()
-            })
-        
-              .setFooter({  text: 'I Hope that helps...'});
-
-               message.channel.send({ embeds: [exampleEmbed] }); 
+            }).setFooter({  text: 'I Hope that helps...'})
+              message.channel.send({ embeds: [exampleEmbed] }); 
            });     
        }
 });
