@@ -147,7 +147,7 @@ if(message.content.startsWith("?roll")){
 
                  let pen = { member : message.author.tag ,  name : chName };
 
-                  axios.post('https://harnforge.com/usRemcon', pen).then(function(response) 
+                  axios.post('https://harnforge.com/idsFinder', pen).then(function(response) 
                   {
                        console.log(response.data)
                   });
