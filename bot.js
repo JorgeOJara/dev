@@ -166,7 +166,6 @@ if(message.content.startsWith("?roll")){
                       { name : "Race ", value :  full.Race ,inline:true },
                       { name : "Sex ", value :  full.Sex ,inline:true },
                     )
-                .setImage(full.Avatare)
                  message.channel.send({ embeds: [exampleEmbed] }); 
                }
 
@@ -180,7 +179,6 @@ if(message.content.startsWith("?roll")){
                        { name : "Culture ", value :  full.Culture ,inline:true },
                        { name : "SocialClass ", value : full.SocialClass,inline:true  },
                     )
-                  .setImage(full.Avatare)
                   message.channel.send({ embeds: [exampleEmbed] }); 
                }
 
@@ -216,7 +214,6 @@ if(message.content.startsWith("?roll")){
                     { name : "voice Description ", value :full.voice[0],inline:true },
                     { name : "voice Value ", value :full.voice[1].toString(),inline:true },
                  ) 
-               .setImage(full.Avatare)
                message.channel.send({ embeds: [exampleEmbed] }); 
              }
 
@@ -233,7 +230,6 @@ if(message.content.startsWith("?roll")){
                     { name : "deity ", value : full.deity,inline:true  },
                     { name : "piety ", value :  full.piety.toString(),inline:true },
                   )
-                    .setImage(full.Avatare)
                      message.channel.send({ embeds: [exampleEmbed] }); 
                      }
             if(check[2] == "image")
